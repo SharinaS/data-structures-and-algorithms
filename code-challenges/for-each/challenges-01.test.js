@@ -64,14 +64,14 @@ Return the modified array.
 const removeOne = (num, arr) => {
   // Solution code here...
   if(num % 3 === 2){
-    arr.pop(num);
+    arr.pop();
   }
 };
 
 const removeElements = (arr, callback) => {
   // Solution code here...
   for(let i = 0; i < arr.length; i++){
-    callback(arr); // <------ num needed?
+    callback(arr[i], arr); 
   }
   return arr;
 };
@@ -86,9 +86,9 @@ Write a function named removeWithForEach that produces the same output as challe
 
 const removeWithForEach = (arr, callback) => {
   // Solution code here...
-  // how do you put the num into the below code?
-  // fix syntax for the forEach (see sample problems)
-  arr.function(forEach((callback()))
+  arr.forEach( ele => { // <--- ele keeps track of element
+    callback(ele, arr);
+  });
   return arr;
 };
 
@@ -104,12 +104,18 @@ This anonymous function should accept up to three arguments: the element, the in
 
 const removeWithAnon = (arr) => {
   // Solution code here...
+  arr.forEach((ele) => {
+    if(ele % 3 === 2){
+      arr.pop();
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -123,8 +129,16 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
-const createList = (availableItems) => {
+const createList = (availableItems) => { // <-- array of current store inventory
   // Solution code here...
+  const groceryList = [];
+  availableItems.forEach( (ele) => {
+    console.log(ele.name);
+    if(ele.available === true){
+      groceryList.push(ele.name);
+    }
+  });
+  return groceryList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,6 +157,21 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  const fizzbuzzArray = [];
+
+  arr.forEach( (ele) => {
+    if(ele % 3 === 0 && ele % 5 ===0){
+      fizzbuzzArray.push('Fizz Buzz');
+    } else if(ele % 3 === 0){
+      fizzbuzzArray.push('Fizz');
+    } else if(ele % 5 === 0){
+      fizzbuzzArray.push('Buzz');
+    } else {
+      fizzbuzzArray.push(ele);
+    }
+  });
+  //console.log(fizzbuzzArray);
+  return fizzbuzzArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -169,28 +198,28 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should remove three elements from the array', () => {
     expect(removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should remove three elements from the array', () => {
     expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should remove three elements from the array', () => {
     expect(removeWithAnon([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(removeWithAnon([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).length).toStrictEqual(7);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
   test('It should only add the available items to the list', () => {
@@ -199,11 +228,11 @@ xdescribe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
     expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
     expect(fizzbuzz(inputs).length).toStrictEqual(16);
   });
-});
+}); 
