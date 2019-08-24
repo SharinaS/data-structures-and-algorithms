@@ -1,6 +1,6 @@
 'use strict';
 
-// DO QUESTIONS 1-5 TO COMPLETE ASSIGNMENT
+// =========== DO QUESTIONS 1-5 TO COMPLETE ASSIGNMENT ===============
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
@@ -94,14 +94,14 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (str) => {  // abc
+const reversedString = (str) => {  // Code 301
   // Solution code here...
-  let rev = str.reduce ((answerSoFar, value, idx) => {
-    value + answerSoFar.split('');
-    console.log(answerSoFar);
-
-  }); //a
-  return rev;
+  let arr = str.split('');
+  let revArr = arr.reduce((answerSoFar,value)=>{
+    answerSoFar.unshift(value);
+    return answerSoFar;
+  }, [])
+  return revArr.join('');
 }; 
 
 /* ------------------------------------------------------------------------------------------------
@@ -155,6 +155,13 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  let countChildren = characters.reduce((answerSoFar, value) => {
+    if(value.children){
+      answerSoFar += value.children.length;
+    }
+    return answerSoFar;
+  },0);
+  return countChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -167,6 +174,7 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
+  return arr.reduce((answerSoFar, value) => (answerSoFar + value)) / arr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -270,19 +278,19 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return the string with the characters in reverse order', () => {
     expect(reversedString('Code 301')).toStrictEqual('103 edoC');
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the average of the numbers in the array', () => {
     expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
   });
