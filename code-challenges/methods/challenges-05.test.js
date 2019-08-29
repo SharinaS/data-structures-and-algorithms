@@ -14,6 +14,8 @@ Your function should use slice within a loop and return an array of each success
 For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
+':)'
+
 
 const howMuchPencil = (str) => {
   let result = [];
