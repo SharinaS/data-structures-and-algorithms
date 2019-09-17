@@ -19,4 +19,4 @@ Big 0 time - O(n)
 Big 0 space - 0(n)
 
 ## Solution
-![screenshot of page](/assets/array-reverse.jpg)
+![screenshot of page](code401Challenges/assets/array-reverse.jpg)
