@@ -21,6 +21,7 @@ Big 0 space - 0(n)
 ## Solution
 ![screenshot of page](code401Challenges/assets/array-reverse.jpg)
 
+
 # Array Shift
 Whiteboarding done with Ahren Swett. Actual code written solo by Sharina Stubbs.
 
@@ -34,3 +35,18 @@ Big 0 space - 0(n)
 
 ## Solution
 ![screenshot of page](code401Challenges/assets/array-shift.jpg)
+
+
+# Binary Search
+Whiteboarding done with Jon Veach. Code written by Sharina Stubbs.
+
+## Challenge
+Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+
+## Approach & Efficiency
+Given the sorted array, my approach was to find the middle of the array, then check to see if the element at the middle matched the key. If it did, then the program simply returned the index of that element. If not, we check if the key is greater than or less than the midpoint, so we can ultimately reset the bounds of array that is searched to either the last half or the first half of the searched array, respectively. We repeat this entire process over and over again using a while loop until either the entire array has been searched, or the key has been found. 
+Big 0 time - O(n)
+Big 0 space - 0(n)
+
+## Solution
+![screenshot of page](code401Challenges/assets/binary-search.jpg)

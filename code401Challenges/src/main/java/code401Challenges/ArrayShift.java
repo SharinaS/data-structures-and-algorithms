@@ -2,9 +2,6 @@ package code401Challenges;
 
 public class ArrayShift {
 
-// no main needed, right?
-    // code needed to differentiate between odd and even length arrays?
-
     public static int[] insertShiftArray(int[] input, int numberToAdd) {
         // find middle index of array
         int middleIndex;
