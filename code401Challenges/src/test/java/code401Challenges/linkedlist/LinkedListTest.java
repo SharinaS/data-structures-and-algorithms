@@ -1,11 +1,29 @@
 package code401Challenges.linkedlist;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
+
+    /*
+    NOTES TO CONSIDER:
+    write a method that run before the tests. No test should rely on the test before. It should be able to be run in
+    whatever order and still produce that same test output.
+    within test, the test within assertEquals will reference the instance variable called testList.
+
+    EXAMPLE:
+    LinkedList testList;
+    @Before
+    public void setup() {
+        testList = new LinkedList();
+        testList.insertAtHead(55);
+        testList.insertAtHead(44);
+    }
+
+    */
 
     // Can properly insert into the linked list
     @Test
@@ -108,6 +126,16 @@ public class LinkedListTest {
                 testList.head
         );
     }
-
 }
+
+/*
+OTHER TESTS TO WRITE:
+    1. Check toString() with an empty linked lit, and a list with one element
+
+ANNOTATIONS
+Annotations (@test) give extra info (metadata to things like JUnit. Can annotate classes, methods, variables within a class.
+Can have multiple annotations on something.
+ */
+
+
 
