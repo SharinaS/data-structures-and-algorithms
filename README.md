@@ -56,16 +56,18 @@ Big 0 space - 0(n)
 ![screenshot of page](code401Challenges/assets/binary-search.jpg)
 
 ## Linked List
-Contains methods:
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Within the LinkedList class, there is a head property. Upon instantiation, an empty Linked List should be created.
+
+Linked List contains these methods:
 * insertAtHead()
 * toString()
 * includes()
 
-### InsertAtHead
-Adds a value to the linked list at the beginning of the list.
+### InsertAtHead()
+Adds a value to the linked list at the beginning of the list. More specifically, it takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
 
-### toString
-Takes the linked list values and outputs them as a string.
+### toString()
+Takes the linked list values and outputs them as a string. toString() takes in no arguments and returns a string representing all the values in the Linked List.
 
 ### includes()
-Checks the values of the linked list for a particular value.
+Checks the values of the linked list for a particular value. Specifically, it takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
