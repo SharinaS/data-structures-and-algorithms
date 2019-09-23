@@ -1,4 +1,4 @@
-# data-structures-and-algorithms
+# Data Structures and Algorithms
 Includes Code challenges from Code301d50 course and from Code401Javad6. All descriptions of code challenges that follow are from Code401 Java.
 
 ## Contributor
