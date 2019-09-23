@@ -8,7 +8,7 @@ Sharina Stubbs
 * [Reverse Array](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java)
 * [Array Shift](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayShift.java)
 * [Binary Search](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
-* Linked List 
+* [Linked List](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist) 
 
 # Approaches, Efficiency and Whiteboarding Solution for Java Code Challenges
 Whiteboarding done with James Dansie. Actual code written solo by Sharina Stubbs.
