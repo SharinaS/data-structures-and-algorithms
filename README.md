@@ -8,6 +8,7 @@ Sharina Stubbs
 * [Reverse Array](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java)
 * [Array Shift](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayShift.java)
 * [Binary Search](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
+* Linked List 
 
 # Approaches, Efficiency and Whiteboarding Solution for Java Code Challenges
 Whiteboarding done with James Dansie. Actual code written solo by Sharina Stubbs.
@@ -53,3 +54,18 @@ Big 0 space - 0(n)
 
 ### Solution
 ![screenshot of page](code401Challenges/assets/binary-search.jpg)
+
+## Linked List
+Contains methods:
+* insertAtHead()
+* toString()
+* includes()
+
+### InsertAtHead
+Adds a value to the linked list at the beginning of the list.
+
+### toString
+Takes the linked list values and outputs them as a string.
+
+### includes()
+Checks the values of the linked list for a particular value.
