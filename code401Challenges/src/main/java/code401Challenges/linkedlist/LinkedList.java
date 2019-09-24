@@ -7,14 +7,8 @@ import java.util.StringJoiner;
 public class LinkedList {
     Node head;
 
-    // === Insert a new node into the front of the lit ===
+    // === Insert a new node into the front of the list ===
     public void insertAtHead(int value){
-        /*
-        // Alternate way of writing the active code:
-        Node newNode = new Node(value);
-        newNode.next = this.head;
-        this.head = newNode;
-        */
 
         // create new object
         Node node = new Node();
@@ -25,10 +19,63 @@ public class LinkedList {
             head = node;
         } else {
             // otherwise, set the head to be the new node, and set the new node's next to be the old head.
-            Node temp = head;
+            node.next = head;
             head = node;
-            head.next = temp;
         }
+    }
+
+    // === insert a value a the end of the linked list ===
+    public void insertAtEnd(int value) {
+        Node newNode = new Node();
+        newNode.value = value;
+        Node curr = head;
+
+        if(head == null){
+            head = newNode;
+        } else {
+            curr = head;
+            while(curr.next != null) {
+                curr = curr.next;
+            }
+            curr.next = newNode;
+        }
+    }
+
+    // === Insert a value before a given node value ===  <-------------
+    public void insertBefore (int value, int newNodeValue) {
+        Node newNode = new Node();
+        Node curr = head;
+        newNode.value = newNodeValue;
+
+        if(head.value == value){
+            newNode.next = head;
+            head = newNode;
+        }
+        while(curr.next != null && curr.next.value != value) {
+                curr = curr.next;
+        }
+        if (curr.next != null) {
+            Node leader = curr.next;
+            curr.next = newNode;
+            newNode.next = leader;
+            return;
+        }
+    }
+
+    // === Insert a value after a given node value ===  <---------------
+    public void insertAfter (int value, int value2) {
+        Node curr = head;
+        Node newNode = new Node();
+        newNode.value = value2;
+
+        while(curr != null && curr.value != value) {
+            curr = curr.next;
+        }
+        if( curr != null) {
+            newNode.next = curr.next;
+            curr.next = newNode;
+        }
+
     }
 
     // === Turn the linked list into a string and return it ===
@@ -61,45 +108,3 @@ public class LinkedList {
     }
 }
 
-/*
-GENERICS:
-Making a class into a generic class that can take different types is not hard. Add inot its definition that it can
-take different types of data. Use angle brackets. Refer to a parameter of whatever type this linked list is of.
-Type parameter T, once specified can now be used anywhere you want to indicate what the correct type is. Use T for text or
-E for element. Replace the ints as indicated with T, or E.
-
-public class LinkedList<T> {
-    Node<T> head;
-
-    public void insertTail(T value) {
-        Node<T> newNode = new Node<>(value); // Java will figure out what needs to be in the empty diamond
-        newNode.next = null;
-    }
-
-}
-
-Class Node<E> {
-    E value;
-    Node<E> next;
-
-    Node(E value){
-
-    }
-}
-
-
-// testing must also change
-public class LinkedListTest {
-    LinkedList<Integer> list;
-
-    @Test
-    public void testHead() {
-        assertEquals(
-            "Head should be 1",
-            1,
-            list.head.value.intValue()) <--- takes an integer and turn it into an int.
-        );
-    }
-
-When using objects instead of primitives, use .equal, not ==
- */
