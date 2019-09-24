@@ -1,31 +1,13 @@
 package code401Challenges.linkedlist;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
 
-    /*
-    NOTES TO CONSIDER:
-    write a method that run before the tests. No test should rely on the test before. It should be able to be run in
-    whatever order and still produce that same test output.
-    within test, the test within assertEquals will reference the instance variable called testList.
-
-    EXAMPLE:
-    LinkedList testList;
-    @Before
-    public void setup() {
-        testList = new LinkedList();
-        testList.insertAtHead(55);
-        testList.insertAtHead(44);
-    }
-
-    */
-
-    // Can properly insert into the linked list
+    // Can properly insert into the linked list at the head
     @Test
     public void testInsertAfterHead() {
         LinkedList testList = new LinkedList();
@@ -35,8 +17,24 @@ public class LinkedListTest {
                 "Should expect 4",
                 4,
                 testList.head.value
-                );
+        );
     }
+
+    // Test inserting value to end of linkedlist
+    @Test
+    public void testInsertAtEnd () {
+        LinkedList testList = new LinkedList();
+
+        testList.insertAtEnd(99);
+        testList.insertAtEnd(4);
+
+        assertEquals(
+                "Should expect 99",
+                99,
+                testList.head.value
+        );
+    }
+
 
     // Test if the head property will properly point to the first node in the linked list
     @Test
@@ -50,7 +48,7 @@ public class LinkedListTest {
                 "Expected 44, which is the value of the first node",
                 44,
                 testList.head.value
-                );
+        );
     }
 
     // Test if a node can be inserted into the Linked List after the head is inserted.
@@ -126,16 +124,42 @@ public class LinkedListTest {
                 testList.head
         );
     }
+
+    // Test if method insertBefore() works appropriately
+    @Test
+    public void testInsertBefore() {
+        LinkedList testList = new LinkedList();
+
+        testList.insertAtHead(4);
+        testList.insertAtHead(45);
+        testList.insertAtHead(3);
+        testList.insertBefore(45, 100);
+
+        assertEquals(
+                "Should expect 100",
+                100,
+                testList.head.next.value
+        );
+
+    }
+
+    // Test if method insertBefore() works appropriately
+    @Test
+    public void testInsertAfter() {
+        LinkedList testList = new LinkedList();
+
+        testList.insertAtHead(4);
+        testList.insertAtHead(45);
+        testList.insertAtHead(3);
+        testList.insertAfter(45, 100);
+
+        assertEquals(
+                "Should expect 100",
+                100,
+                testList.head.next.next.value
+        );
+
+    }
+
+
 }
-
-/*
-OTHER TESTS TO WRITE:
-    1. Check toString() with an empty linked lit, and a list with one element
-
-ANNOTATIONS
-Annotations (@test) give extra info (metadata to things like JUnit. Can annotate classes, methods, variables within a class.
-Can have multiple annotations on something.
- */
-
-
-

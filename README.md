@@ -62,6 +62,9 @@ Linked List contains these methods:
 * insertAtHead()
 * toString()
 * includes()
+* insertAtEnd()
+* insertBefore()
+* insertAfter()
 
 ### InsertAtHead()
 Adds a value to the linked list at the beginning of the list. More specifically, it takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
@@ -71,3 +74,15 @@ Takes the linked list values and outputs them as a string. toString() takes in n
 
 ### includes()
 Checks the values of the linked list for a particular value. Specifically, it takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+
+### append
+adds a new node with the given value to the end of the list
+
+### insertBefore
+ add a new node with the given newValue immediately before the first value node
+
+### insertAfter
+ add a new node with the given newValue immediately after the first value node
+
+### Whiteboarding several of the methods
+![screenshot of page](code401Challenges/assets/linked-list.jpg)
