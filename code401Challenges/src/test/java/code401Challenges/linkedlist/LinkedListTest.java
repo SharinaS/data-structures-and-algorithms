@@ -160,6 +160,10 @@ public class LinkedListTest {
         );
 
     }
-
-
 }
+
+/*
+Write more tests
+1. Check before head
+2. Check what happens when inserting into an empty list
+ */

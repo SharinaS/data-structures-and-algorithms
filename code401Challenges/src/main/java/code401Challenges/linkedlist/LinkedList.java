@@ -22,6 +22,9 @@ public class LinkedList {
             node.next = head;
             head = node;
         }
+
+        // Note: shorter and sexier alternative to adding a node:
+        //public void insertHeadReview(Review data) {this.head = new Node(data, this.head);}
     }
 
     // === insert a value a the end of the linked list ===
