@@ -10,14 +10,15 @@ Sharina Stubbs
 * [Binary Search](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
 * [Linked List](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist) 
 
-# Approaches, Efficiency and Whiteboarding Solution for Java Code Challenges
-Whiteboarding done with James Dansie. Actual code written solo by Sharina Stubbs.
+# Code Challenges that Use Arrays
+* reverseArray()
+* arrayShift()
+* binarySearch()
 
 ## Reverse Array
 Write a function called reverseArray that takes an array as an argument and returns an array with elements in reversed order. Avoids any built-in language specific methods.
 
 ### Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 I decided to approach this problem with creating a new array, instead of the other option I had considered, which was to change the array in place. I chose the new array approach since it made the most sense to me initially, however creating a new array would sacrifice memory. 
 
 Big 0 time - O(n)
@@ -55,9 +56,7 @@ Big 0 space - 0(n)
 ### Solution
 ![screenshot of page](code401Challenges/assets/binary-search.jpg)
 
-## Linked List
-Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Within the LinkedList class, there is a head property. Upon instantiation, an empty Linked List should be created.
-
+# Code Challenges that Use Linked Lists
 Linked List contains these methods:
 * insertAtHead()
 * toString()
@@ -65,6 +64,10 @@ Linked List contains these methods:
 * insertAtEnd()
 * insertBefore()
 * insertAfter()
+* runningBackwards()
+
+## Linked List
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Within the LinkedList class, there is a head property. Upon instantiation, an empty Linked List should be created.
 
 ### InsertAtHead()
 Adds a value to the linked list at the beginning of the list. More specifically, it takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
@@ -75,14 +78,21 @@ Takes the linked list values and outputs them as a string. toString() takes in n
 ### includes()
 Checks the values of the linked list for a particular value. Specifically, it takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
-### append
+### append()
 adds a new node with the given value to the end of the list
 
-### insertBefore
+### insertBefore()
  add a new node with the given newValue immediately before the first value node
 
-### insertAfter
+### insertAfter()
  add a new node with the given newValue immediately after the first value node
 
-### Whiteboarding several of the methods
+### Whiteboarding of append(), insertBefore() and insertAfter()
 ![screenshot of page](code401Challenges/assets/linked-list.jpg)
+
+### runningBackwards()
+A method for the Linked List class which takes a number, k, as a parameter. The output is the node’s value that is k from the end of the linked list. 
+
+![screenshot of page](code401Challenges/assets/kth-from-end1.jpg)
+![screenshot of page](code401Challenges/assets/kth-from-end2.jpg)
+
