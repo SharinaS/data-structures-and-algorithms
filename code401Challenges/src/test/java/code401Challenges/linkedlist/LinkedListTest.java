@@ -193,8 +193,8 @@ public class LinkedListTest {
                 testList.runningBackwards(5));
     }
 
-    // test where k is not positive - test should fail and show exception
-    @Test
+    // test where k is not positive - test has exception
+    @Test(expected = IllegalArgumentException.class)
     public void testRunningBackwards3() {
         LinkedList testList = new LinkedList();
         testList.insertAtHead(50);
@@ -202,18 +202,18 @@ public class LinkedListTest {
         testList.insertAtHead(30);
         testList.insertAtHead(60);
 
-        assertNull(testList.runningBackwards(-1));
+        testList.runningBackwards(-1);
     }
 
-    // test where k is greater than the list length - test should fail and show exception
-    @Test
+    // test where k is greater than the list length - test has exception
+    @Test(expected = IllegalArgumentException.class)
     public void testRunningBackwards4() {
         LinkedList testList = new LinkedList();
         testList.insertAtHead(50);
         testList.insertAtHead(30);
         testList.insertAtHead(60);
 
-        assertNull(testList.runningBackwards(9));
+        testList.runningBackwards(9);
     }
 
 
