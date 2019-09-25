@@ -132,5 +132,19 @@ public class LinkedList {
         }
         return curr.value;
     }
+
+    /* Alternative to the above:
+    Create a leader and a follower. If I need to find the second from the end,
+    and the array is two from the end, put those two variables k vodes apart. Then, move each variables step by step down
+    the linked list. When the leader hits the end, the follower will be the node you're looking for.  Time complexity is O(n)
+    and space complexity is O(1).
+    Node front = list.head;
+    Node back = list.head;
+    int counter = 0
+    While (front !=null):
+    front = front.next
+    counter ++
+    if(counter > k) back = back.next.
+    */
 }
 
