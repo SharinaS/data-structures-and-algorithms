@@ -158,8 +158,65 @@ public class LinkedListTest {
                 100,
                 testList.head.next.next.value
         );
-
     }
+
+    // check if method to find kth from the end returns 30 if k is 3 - 'happy path.'
+    @Test
+    public void testRunningBackwards() {
+        LinkedList testList = new LinkedList();
+        testList.insertAtHead(50);
+        testList.insertAtHead(10);
+        testList.insertAtHead(30);
+        testList.insertAtHead(60);
+        testList.insertAtHead(40);
+
+        assertEquals(
+                "should expect 30",
+                30,
+                testList.runningBackwards(3)
+        );
+    }
+
+    // check where k and the length of the list are the same
+    @Test
+    public void testRunningBackwards2() {
+        LinkedList testList = new LinkedList();
+        testList.insertAtHead(50);
+        testList.insertAtHead(10);
+        testList.insertAtHead(30);
+        testList.insertAtHead(60);
+        testList.insertAtHead(40);
+
+        assertEquals(
+                "should expect 40",
+                40,
+                testList.runningBackwards(5));
+    }
+
+    // test where k is not positive - test should fail and show exception
+    @Test
+    public void testRunningBackwards3() {
+        LinkedList testList = new LinkedList();
+        testList.insertAtHead(50);
+        testList.insertAtHead(10);
+        testList.insertAtHead(30);
+        testList.insertAtHead(60);
+
+        assertNull(testList.runningBackwards(-1));
+    }
+
+    // test where k is greater than the list length - test should fail and show exception
+    @Test
+    public void testRunningBackwards4() {
+        LinkedList testList = new LinkedList();
+        testList.insertAtHead(50);
+        testList.insertAtHead(30);
+        testList.insertAtHead(60);
+
+        assertNull(testList.runningBackwards(9));
+    }
+
+
 }
 
 /*

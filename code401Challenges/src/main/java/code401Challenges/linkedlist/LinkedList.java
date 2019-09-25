@@ -109,5 +109,28 @@ public class LinkedList {
         }
         return false;
     }
+
+    //=== Find a value in the list that is k nodes from the end ===
+    public int runningBackwards(int k) {
+        Node curr = head;
+        int listLength = 0;
+
+        while (curr != null) {
+            listLength += 1;
+            curr = curr.next;
+        }
+        int stepsToTake = listLength - k;
+        if(stepsToTake < 0 || stepsToTake > listLength)
+            throw new IllegalArgumentException("k is too big, given the length of the list");
+
+        curr = head;
+        int counter = 0;
+
+        while (curr != null && counter != stepsToTake) {
+            counter += 1;
+            curr = curr.next;
+        }
+        return curr.value;
+    }
 }
 
