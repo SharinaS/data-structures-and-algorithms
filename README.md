@@ -15,6 +15,7 @@ Sharina Stubbs
 * arrayShift()
 * binarySearch()
 
+
 ## Reverse Array
 Write a function called reverseArray that takes an array as an argument and returns an array with elements in reversed order. Avoids any built-in language specific methods.
 
@@ -65,6 +66,7 @@ Linked List contains these methods:
 * insertBefore()
 * insertAfter()
 * runningBackwards()
+* mergeLists()
 
 ## Linked List
 Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Within the LinkedList class, there is a head property. Upon instantiation, an empty Linked List should be created.
@@ -96,3 +98,7 @@ A method for the Linked List class which takes a number, k, as a parameter. The 
 ![screenshot of page](code401Challenges/assets/kth-from-end1.jpg)
 ![screenshot of page](code401Challenges/assets/kth-from-end2.jpg)
 
+### MergeLists()
+In place merge of two linked lists that uses a while loop to iterate through the lists. Pointers and temp variable(s) are used to point from node to node, to essentially combine the two lists. This was a pair-programming whiteboarding with Sarah Fisher.
+
+![screenshot of page](code401Challenges/assets/merge-list.jpg)

@@ -2,6 +2,8 @@ package code401Challenges.linkedlist;
 
 // Resource: Linked List Implementation: https://www.youtube.com/watch?v=SMIq13-FZSE
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.StringJoiner;
 
 public class LinkedList {
@@ -146,5 +148,29 @@ public class LinkedList {
     counter ++
     if(counter > k) back = back.next.
     */
+
+
+    public static LinkedList mergeLists(LinkedList a, LinkedList b) {
+        Node bCurr = b.head;
+        Node aCurr = a.head;
+        Node bNext;
+        Node aNext;
+
+        //While there are positions left in b
+        while(aCurr != null && bCurr != null) {
+            bNext = bCurr.next;
+            aNext = aCurr.next;
+
+            aCurr.next = bNext;
+            bCurr.next = aCurr;
+
+            bCurr = bNext;
+            aCurr = aNext;
+        }
+
+        b.head = bCurr;
+        return b;
+    }
+
 }
 
