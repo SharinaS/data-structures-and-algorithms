@@ -216,11 +216,33 @@ public class LinkedListTest {
         testList.runningBackwards(9);
     }
 
+    //=== Testing of public static LinkedList mergeLists(LinkedList a, LinkedList b) ===
 
+
+    @Test
+    public void testLinkedList1() {
+
+        LinkedList testListOne = new LinkedList();
+        LinkedList testListTwo = new LinkedList();
+        // list one
+        testListOne.insertAtHead(2);
+        testListOne.insertAtHead(3);
+        testListOne.insertAtHead(1);
+        // list two
+        testListTwo.insertAtHead(4);
+        testListTwo.insertAtHead(9);
+        testListTwo.insertAtHead(5);
+        LinkedList.mergeLists(testListOne, testListTwo);
+
+        assertEquals("should get 1 5 3 9 2 4",
+                "1, 5, 3, 9, 2, 4",
+                testListOne.toString()
+                );
+    }
 }
 
 /*
-Write more tests
+Remember these weird ones:
 1. Check before head
 2. Check what happens when inserting into an empty list
  */
