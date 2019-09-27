@@ -149,8 +149,8 @@ public class LinkedList {
     if(counter > k) back = back.next.
     */
 
-
-    public static LinkedList mergeLists(LinkedList a, LinkedList b) {
+    // Finds alternating nodes of two linked lists and joins them into one list
+    public static LinkedList mergeAlternatingNodes(LinkedList a, LinkedList b) {
         Node bCurr = b.head;
         Node aCurr = a.head;
         Node bNext;
@@ -170,6 +170,32 @@ public class LinkedList {
 
         b.head = bCurr;
         return b;
+    }
+
+    // Merge two linked lists
+    // Received help with logic from Michelle Ferreirae
+    public static LinkedList mergeLinkedLists(LinkedList a, LinkedList b) {
+        if (a.head == null) {
+            return b;
+        }
+
+        Node bCurr = b.head;
+        Node aCurr = a.head;
+
+        //While there are positions left in b
+        while(aCurr != null && bCurr != null) {
+            Node temp1 = aCurr.next;
+            Node temp2 = bCurr.next;
+
+            if (aCurr.next != null) {
+                bCurr.next = aCurr.next;
+            }
+
+            aCurr.next = bCurr;
+            aCurr = temp1;
+            bCurr = temp2;
+        }
+        return a;
     }
 
 }
