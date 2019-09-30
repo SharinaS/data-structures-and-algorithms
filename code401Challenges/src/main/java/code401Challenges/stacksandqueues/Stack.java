@@ -3,6 +3,7 @@ package code401Challenges.stacksandqueues;
 // Youtube resource: "Implement stack using Linked list"
 
 import java.util.EmptyStackException;
+import java.util.NoSuchElementException;
 
 public class Stack {
     Node top;
@@ -23,9 +24,9 @@ public class Stack {
     }
 
     // pop method - removes the node from the top of the stack, and returns the node’s value.
-    public int pop() throws EmptyStackException {
+    public int pop() throws NoSuchElementException {
         if(this.top == null) {
-            throw new EmptyStackException();
+            throw new NoSuchElementException("The stack is bone dry empty");
         } else {
             Node temp = top;
             this.top = this.top.next;
