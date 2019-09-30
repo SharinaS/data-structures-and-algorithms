@@ -22,7 +22,7 @@ public class StackTest {
                 );
     }
 
-    // check that data is pushed to top of stack
+    // check that multiple pieces of data is pushed to top of stack
     @Test
     public void testPush2() {
         Stack testStack = new Stack();
@@ -61,6 +61,13 @@ public class StackTest {
         testStack.pop();
         testStack.pop();
         testStack.pop();
+    }
+
+
+    @Test
+    public void testStackExists() {
+        Stack testStack = new Stack();
+        assertNull(testStack.top);
     }
 
 

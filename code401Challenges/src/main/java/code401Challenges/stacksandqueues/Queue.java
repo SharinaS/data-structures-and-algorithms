@@ -45,9 +45,9 @@ public class Queue {
 
     // peek method - does not take an argument and returns the value of the node located on top of the stack,
     // without removing it from the stack.
-    public int peek() throws EmptyStackException {
+    public int peek() throws NoSuchElementException {
         if (this.front == null) {
-            throw new EmptyStackException();
+            throw new NoSuchElementException();
         } else {
             return this.front.data;
         }

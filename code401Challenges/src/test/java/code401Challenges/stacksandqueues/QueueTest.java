@@ -56,4 +56,10 @@ public class QueueTest {
         testQueue.dequeue();
         testQueue.dequeue();
     }
+
+    @Test
+    public void testQueueExistence() {
+        Queue testQueue = new Queue();
+        assertNull(testQueue.front);
+    }
 }

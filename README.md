@@ -4,11 +4,12 @@ Includes Code challenges from Code301d50 course and from Code401Javad6. All desc
 ## Contributor
 Sharina Stubbs
 
-# Java Code Challenges Found Within:
+# Data Structures Found Within:
 * [Reverse Array](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java)
 * [Array Shift](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayShift.java)
 * [Binary Search](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
 * [Linked List](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist) 
+* [Stacks and Queues](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
 
 # Code Challenges that Use Arrays
 * reverseArray()
@@ -57,7 +58,7 @@ Big 0 space - 0(n)
 ### Solution
 ![screenshot of page](code401Challenges/assets/binary-search.jpg)
 
-# Code Challenges that Use Linked Lists
+# Linked List Code Challenges
 Linked List contains these methods:
 * insertAtHead()
 * toString()
@@ -71,6 +72,7 @@ Linked List contains these methods:
 ## Linked List
 Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Within the LinkedList class, there is a head property. Upon instantiation, an empty Linked List should be created.
 
+## Linked List Methods
 ### InsertAtHead()
 Adds a value to the linked list at the beginning of the list. More specifically, it takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
 
@@ -102,3 +104,32 @@ A method for the Linked List class which takes a number, k, as a parameter. The 
 In place merge of two linked lists that uses a while loop to iterate through the lists. Pointers and temp variable(s) are used to point from node to node, to essentially combine the two lists. This was a pair-programming whiteboarding with Sarah Fisher.
 
 ![screenshot of page](code401Challenges/assets/merge-list.jpg)
+
+# [Stacks and Queues Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
+Work is found within the package "stacksandqueues", and includes a node class, a queue class and a stack class.
+
+Stack Methods:
+* push();
+* pop();
+* peep();
+
+Queue Methods:
+* enqueue();
+* dequeue();
+* peep();
+
+
+## Challenge
+Create methods for stack and queue classes that remove and add data to the stack or list:
+
+### Stack:
+From the challenge description: "This object should be aware of a default empty value assigned to top when the stack is created. Define a method called push which takes any value as an argument and adds a new node with that value to the top of the stack with an O(1) Time performance. Define a method called pop that does not take any argument, removes the node from the top of the stack, and returns the node’s value. Define a method called peek that does not take an argument and returns the value of the node located on top of the stack, without removing it from the stack."
+
+* Push is O(1) time performance
+* Pop is O(1) time performance
+
+### Queue:
+From the challenge description: "This object should be aware of a default empty value assigned to front when the queue is created. Define a method called enqueue which takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time performance. Define a method called dequeue that does not take any argument, removes the node from the front of the queue, and returns the node’s value. Define a method called peek that does not take an argument and returns the value of the node located in the front of the queue, without removing it from the queue."
+
+* Enqueue is O(1) time performance
+* Dequeue is O(1) time performance
