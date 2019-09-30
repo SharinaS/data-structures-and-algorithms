@@ -1,6 +1,10 @@
 package code401Challenges.stacksandqueues;
 
 import java.util.EmptyStackException;
+import java.util.NoSuchElementException;
+
+// Youtube resource: "Data Structure - Queue: Implement Queue using Linked List"
+// https://www.youtube.com/watch?v=xSa0jg52aEw&t=459s
 
 public class Queue {
     //instance variable
@@ -22,8 +26,20 @@ public class Queue {
         if(this.back == null) {
             this.front = this.back = newNode;
         } else {
+            // tell the last node to point to the new node
             this.back.next = newNode;
+            // tell back to point to the new node.
             this.back = this.back.next;
+        }
+    }
+
+    public void dequeue() throws NoSuchElementException {
+        if(this.back == null) {
+            throw new NoSuchElementException("The queue is empty");
+        }
+        this.front = front.next;
+        if(this.front == null) {
+            this.back = null;
         }
     }
 

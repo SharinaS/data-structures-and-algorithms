@@ -3,6 +3,7 @@ package code401Challenges.stacksandqueues;
 import org.junit.Test;
 
 import java.util.EmptyStackException;
+import java.util.NoSuchElementException;
 
 import static org.junit.Assert.*;
 
@@ -52,7 +53,7 @@ public class StackTest {
     }
 
     // check that empty stack exception activated
-    @Test(expected = EmptyStackException.class)
+    @Test(expected = NoSuchElementException.class)
     public void testPop2() {
         Stack testStack = new Stack();
         testStack.push(10);
