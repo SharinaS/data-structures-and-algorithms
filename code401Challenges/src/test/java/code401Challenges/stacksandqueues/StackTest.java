@@ -70,5 +70,16 @@ public class StackTest {
         assertNull(testStack.top);
     }
 
+    @Test
+    public void testIsEmpty() {
+        Stack testStack = new Stack();
+        testStack.push(10);
+        testStack.push(20);
+        assertEquals("false",
+                false,
+                testStack.isEmpty());
+
+    }
+
 
 } // end StackTest

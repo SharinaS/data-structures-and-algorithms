@@ -1,6 +1,7 @@
 package code401Challenges.stacksandqueues;
 
-// Youtube resource: "Implement stack using Linked list"
+// Youtube resource: "Data Structure - Stack: Implement Stack using Linked List",
+// https://www.youtube.com/watch?v=0wG3AM0Be50
 
 import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
@@ -42,5 +43,9 @@ public class Stack {
         } else {
             return this.top.data;
         }
+    }
+
+    public boolean isEmpty() {
+        return this.top == null;
     }
 }
