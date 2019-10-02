@@ -4,12 +4,12 @@ import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
 /* To enqueue, we make sure there's stuff in the enqueue stack, or the first stack. To Dequeue, we flip the stuff into the
-* dequeue stack, or stack 2*/
+ dequeue stack, or stack 2 */
 
-public class PseudoQueue {
+public class PseudoQueue<T> {
 
-    Stack stack1 = new Stack();
-    Stack stack2 = new Stack();
+    Stack<T> stack1 = new Stack<>();
+    Stack<T> stack2 = new Stack<>();
 
     // =========== less optimal way to do code challenge - the following has either full or empty stacks.
 
@@ -31,11 +31,11 @@ public class PseudoQueue {
     // ========== more optimized way of doing this code challenge -
     // both stacks are working; they don't have to be all empty or all full.
 
-    public void enqueue(int value){
+    public void enqueue(T value){
         stack1.push(value);
     }
 
-    public int dequeue() {
+    public T dequeue() {
         if(!stack2.isEmpty()) {
             while(!stack1.isEmpty()){
                 stack2.push(stack1.pop());
@@ -48,7 +48,7 @@ public class PseudoQueue {
         return stack2.pop();
     }
 
-    public int peek() throws EmptyStackException {
+    public T peek() throws EmptyStackException {
         if (stack1.top == null) {
             throw new EmptyStackException();
         } else {

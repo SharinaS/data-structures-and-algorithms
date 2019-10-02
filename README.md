@@ -151,3 +151,8 @@ To enqueue, one can push a value directly to stack1. To dequeue, the stack must 
 
 ### Algorithm and pseudocode
 ![screenshot of page](code401Challenges/assets/queue-with-stacks.jpg)
+
+## Challenge: Build an Animal Shelter Class
+
+### Whiteboarding:
+![screenshot of page](code401Challenges/assets/animal-shelter.jpg)

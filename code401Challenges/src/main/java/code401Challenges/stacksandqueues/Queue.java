@@ -1,15 +1,14 @@
 package code401Challenges.stacksandqueues;
 
-import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
 // Youtube resource: "Data Structure - Queue: Implement Queue using Linked List"
 // https://www.youtube.com/watch?v=xSa0jg52aEw&t=459s
 
-public class Queue {
+public class Queue<T> {
     //instance variable
-    Node front;
-    Node back;
+    Node<T> front;
+    Node<T> back;
 
     // constructor
     public Queue () {
@@ -19,8 +18,8 @@ public class Queue {
 
     // Method takes any value as an argument and adds a new node with that value to the back
     // of the queue with an O(1) Time performance.
-    public void enqueue(int data) {
-        Node newNode = new Node(data);
+    public void enqueue(T data) {
+        Node<T> newNode = new Node<T>(data);
 
         // queue is empty, so just add newNode
         if(this.back == null) {

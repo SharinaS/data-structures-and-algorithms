@@ -6,18 +6,17 @@ package code401Challenges.stacksandqueues;
 import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
-public class Stack {
-    Node top;
+public class Stack<T> {
+    Node<T> top;
 
     public Stack() {
         this.top = null;
-
     }
 
     // push method - adds a new node with that value to the top of the stack with an O(1) Time performance.
-    public void push(int data) {
+    public void push(T data) {
         // create a node
-        Node newNode = new Node(data);
+        Node<T> newNode = new Node<T>(data);
         // point the new node to the top of the list
         newNode.next = this.top;
         // change the top pointer to the new node
