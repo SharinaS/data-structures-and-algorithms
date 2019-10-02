@@ -24,11 +24,11 @@ public class Stack<T> {
     }
 
     // pop method - removes the node from the top of the stack, and returns the node’s value.
-    public int pop() throws NoSuchElementException {
+    public T pop() throws NoSuchElementException {
         if(this.top == null) {
             throw new NoSuchElementException("The stack is bone dry empty");
         } else {
-            Node temp = top;
+            Node<T> temp = top;
             this.top = this.top.next;
             return temp.data;
         }
@@ -36,7 +36,7 @@ public class Stack<T> {
 
     // peek method - does not take an argument and returns the value of the node located on top of the stack,
     // without removing it from the stack.
-    public int peek() throws EmptyStackException {
+    public T peek() throws EmptyStackException {
         if (this.top == null) {
             throw new EmptyStackException();
         } else {
