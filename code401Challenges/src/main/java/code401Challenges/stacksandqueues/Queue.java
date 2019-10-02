@@ -28,11 +28,12 @@ public class Queue<T> {
             // tell the last node to point to the new node
             this.back.next = newNode;
             // tell back to point to the new node.
-            this.back = this.back.next;
+            this.back = newNode;
         }
     }
 
-    public void dequeue() throws NoSuchElementException {
+    public T dequeue() throws NoSuchElementException {
+        Node<T> curr = this.front;
         if(this.back == null) {
             throw new NoSuchElementException("The queue is empty");
         }
@@ -40,11 +41,12 @@ public class Queue<T> {
         if(this.front == null) {
             this.back = null;
         }
+        return curr.data;
     }
 
     // peek method - does not take an argument and returns the value of the node located on top of the stack,
     // without removing it from the stack.
-    public int peek() throws NoSuchElementException {
+    public T peek() throws NoSuchElementException {
         if (this.front == null) {
             throw new NoSuchElementException();
         } else {

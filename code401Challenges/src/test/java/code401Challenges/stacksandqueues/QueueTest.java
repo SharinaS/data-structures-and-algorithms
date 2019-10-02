@@ -58,6 +58,17 @@ public class QueueTest {
     }
 
     @Test
+    public void testDQ3() {
+        Queue<Integer> testQueue = new Queue<>();
+        testQueue.enqueue(100);
+        testQueue.enqueue(200);
+        testQueue.enqueue(300);
+        assertEquals((Integer)100, testQueue.dequeue());
+        assertEquals((Integer)200, testQueue.dequeue());
+        assertEquals((Integer)300, testQueue.dequeue());
+    }
+
+    @Test
     public void testQueueExistence() {
         Queue testQueue = new Queue();
         assertNull(testQueue.front);

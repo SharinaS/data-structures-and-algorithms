@@ -14,10 +14,10 @@ public class AnimalShelterTest {
         Queue testCatQ = new Queue();
 
         testShelter.enqueue(testCat);
-        assertEquals("Expected testCat1 in the shelter",
+        assertEquals("Expected testCat in the shelter",
                 testCat,
                 testCatQ.peek()
-                );
+        );
     }
 
     @Test
@@ -32,9 +32,10 @@ public class AnimalShelterTest {
                 testDogQ.peek()
         );
 
-    @Test
-    public void dequeue() {
-        
-        }
+//        @Test
+//        public void dequeue() {
+//
+//        }
     }
+
 }
