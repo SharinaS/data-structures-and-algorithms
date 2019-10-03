@@ -7,35 +7,53 @@ import static org.junit.Assert.*;
 
 public class AnimalShelterTest {
 
+    // check that cat can be added to the queue
     @Test
     public void testEnqueueForCat() {
-        AnimalShelter testShelter = new AnimalShelter();
         Cat testCat = new Cat();
-        Queue testCatQ = new Queue();
+        Queue<Cat> testCatQ = new Queue<>();
 
-        testShelter.enqueue(testCat);
-        assertEquals("Expected testCat in the shelter",
+        testCatQ.enqueue(testCat);
+
+        assertEquals("Expected a Cat in the shelter",
                 testCat,
                 testCatQ.peek()
         );
     }
 
+    // check that a dog is added to the dog queue
     @Test
-    public void testEnqueueForDog() {
-        AnimalShelter testShelter = new AnimalShelter();
+    public void testEnqueueDog() {
         Dog testDog = new Dog();
         Queue testDogQ = new Queue();
 
-        testShelter.enqueue(testDog);
-        assertEquals("Expected testDog in the shelter",
+        testDogQ.enqueue(testDog);
+        assertEquals("Expected a Dog in the shelter",
                 testDog,
                 testDogQ.peek()
         );
-
-//        @Test
-//        public void dequeue() {
-//
-//        }
     }
+
+    // Issue: dequeue method is taken from queue class methods, and doesn't accept the string that the new dequeue method should accept
+//    @Test
+//    public void testDequeueDog() {
+//        Dog testDog1 = new Dog();
+//        Dog testDog2 = new Dog();
+//        Dog testDog3 = new Dog();
+//
+//        Queue testDogQ = new Queue();
+//        testDogQ.enqueue(testDog3);
+//
+//        testDogQ.enqueue(testDog1);
+//        testDogQ.enqueue(testDog2);
+//        testDogQ.enqueue(testDog3);
+//
+//        assertEquals("Should have testDog1",
+//                testDog1,
+//                testDogQ.dequeue("dog")
+//        );
+//    }
+
+
 
 }

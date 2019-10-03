@@ -23,7 +23,8 @@ public class Queue<T> {
 
         // queue is empty, so just add newNode
         if(this.back == null) {
-            this.front = this.back = newNode;
+            this.front = newNode;
+            this.back = newNode;
         } else {
             // tell the last node to point to the new node
             this.back.next = newNode;
