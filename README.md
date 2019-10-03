@@ -10,7 +10,9 @@ Sharina Stubbs
 * [Binary Search](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
 * [Linked List](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist) 
 * [Stacks and Queues](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
+* [Utilities - contains Animal Shelter and MultiBracket Validation](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
 * [PseudoQueue](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
+
 
 # Code Challenges that Use Arrays
 * reverseArray()
@@ -157,3 +159,27 @@ Challenge description: "Create a class called AnimalShelter which holds only dog
 
 ### Whiteboarding:
 ![screenshot of page](code401Challenges/assets/animal-shelter.jpg)
+
+## Multi-Bracket Validation
+Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+* Round Brackets : ()
+* Square Brackets : []
+* Curly Brackets : {}
+
+Examples:
+* {}	TRUE
+* {}{Code}[Fellows](())	TRUE
+* {(})	FALSE
+* [({}]	FALSE
+
+### Algorithm
+The algorithm I implemented in my code uses a stack to store all open brackets. For each iteration through the string, the potential mate of the bracket stored in the stack is compared to the top of the stack. If there's a match, the bracket in the stack is popped. What should be left is an empty stack. If not, there's an unclaimed bracket in the stack, and so the algorithm returns false.
+
+Big O:
+* Time: O(1)  
+* Space: O(n) <---- ?
+
+### Whiteboarding
+I created an algorithm for this code challenge during my whiteboarding that I decided not to implement. When I started coding, I realized that using a stack would be easier to implement. 
+![screenshot of page](code401Challenges/assets/bracket-validation.jpg)
