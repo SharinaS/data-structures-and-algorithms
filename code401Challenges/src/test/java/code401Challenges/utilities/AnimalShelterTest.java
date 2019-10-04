@@ -94,7 +94,7 @@ public class AnimalShelterTest {
 
         testShelter.enqueue(testDog1);
         testShelter.enqueue(testCat1);
-        
+
         testShelter.dequeue("snake");
     }
 

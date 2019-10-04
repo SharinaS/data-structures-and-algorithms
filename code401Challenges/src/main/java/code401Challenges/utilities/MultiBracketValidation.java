@@ -1,18 +1,17 @@
 package code401Challenges.utilities;
 
-import java.util.ArrayList;
 import java.util.Stack;
+
+// some help with the final logic from a leetcode discussion at
+// https://leetcode.com/problems/valid-parentheses/discuss/9248/My-easy-to-understand-Java-Solution-with-one-stack
+//Stack<Character> charStack = new Stack<Character>();
 
 public class MultiBracketValidation {
 
     public static boolean multiBracketValidation (String input) {
 
-        // some help with the final logic from a leetcode discussion at
-        // https://leetcode.com/problems/valid-parentheses/discuss/9248/My-easy-to-understand-Java-Solution-with-one-stack
-        //Stack<Character> charStack = new Stack<Character>();
-
         Stack<Character> charStack = new Stack<>();
-        // push open parens onto stack
+
         for(int i = 0; i < input.length(); i++) {
             if(input.charAt(i) == ')' || input.charAt(i) == ']' || input.charAt(i) == '}') {
                 charStack.push(input.charAt(i));
@@ -24,8 +23,9 @@ public class MultiBracketValidation {
             } else if (input.charAt(i) == '{' && !charStack.isEmpty() && charStack.peek() == '}'){
                 charStack.pop();
                 // if there's not a match, there's a lonely bracket in there.
-            } else
+            } else {
                 return false;
+            }
         }
         //if there are no open parens left in stack, return true...
         return charStack.isEmpty();
