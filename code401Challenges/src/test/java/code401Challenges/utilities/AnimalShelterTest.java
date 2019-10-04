@@ -10,6 +10,7 @@ public class AnimalShelterTest {
     // check that cat can be added to the queue
     @Test
     public void testEnqueueForCat() {
+
         Cat testCat = new Cat();
         Queue<Cat> testCatQ = new Queue<>();
 
@@ -25,35 +26,78 @@ public class AnimalShelterTest {
     @Test
     public void testEnqueueDog() {
         Dog testDog = new Dog();
-        Queue testDogQ = new Queue();
-
+        Queue<Dog> testDogQ = new Queue<>();
         testDogQ.enqueue(testDog);
+
         assertEquals("Expected a Dog in the shelter",
                 testDog,
                 testDogQ.peek()
         );
     }
 
-    // Issue: dequeue method is taken from queue class methods, and doesn't accept the string that the new dequeue method should accept
-//    @Test
-//    public void testDequeueDog() {
-//        Dog testDog1 = new Dog();
-//        Dog testDog2 = new Dog();
-//        Dog testDog3 = new Dog();
-//
-//        Queue testDogQ = new Queue();
-//        testDogQ.enqueue(testDog3);
-//
-//        testDogQ.enqueue(testDog1);
-//        testDogQ.enqueue(testDog2);
-//        testDogQ.enqueue(testDog3);
-//
-//        assertEquals("Should have testDog1",
-//                testDog1,
-//                testDogQ.dequeue("dog")
-//        );
-//    }
+    // Check that a dog can be entered in and taken out of animal shelter
+    @Test
+    public void testDequeueDog() {
+        Dog testDog1 = new Dog();
 
+        AnimalShelter testShelter = new AnimalShelter();
+        testShelter.enqueue(testDog1);
 
+        assertEquals("Should have testDog1",
+                testDog1,
+                testShelter.dequeue("dog")
+        );
+    }
+
+    // Check that a cat can be entered in and taken out of animal shelter in the presence of dogs
+    @Test
+    public void testAdoptCat() {
+        Dog testDog1 = new Dog();
+        Cat testCat1 = new Cat();
+        Dog testDog3 = new Dog();
+        AnimalShelter testShelter = new AnimalShelter();
+
+        testShelter.enqueue(testDog1);
+        testShelter.enqueue(testCat1);
+        testShelter.enqueue(testDog3);
+
+        assertEquals("Should have testCat1",
+                testCat1,
+                testShelter.dequeue("cat")
+        );
+    }
+
+    // Check that the oldest dog can be entered in and taken out of animal shelter in the presence of cats
+    @Test
+    public void testAdoptDog() {
+        Dog testDog1 = new Dog();
+        Cat testCat1 = new Cat();
+        Dog testDog3 = new Dog();
+        AnimalShelter testShelter = new AnimalShelter();
+
+        testShelter.enqueue(testDog1);
+        testShelter.enqueue(testCat1);
+        testShelter.enqueue(testDog3);
+
+        assertEquals("Should have testDog1",
+                testDog1,
+                testShelter.dequeue("dog")
+        );
+    }
+
+    // Try to get an animal besides a cat or dog
+    @Test(expected = IllegalArgumentException.class)
+    public void testAdoptSomething() {
+        Dog testDog1 = new Dog();
+        Cat testCat1 = new Cat();
+        AnimalShelter testShelter = new AnimalShelter();
+
+        testShelter.enqueue(testDog1);
+        testShelter.enqueue(testCat1);
+        
+        testShelter.dequeue("snake");
+    }
 
 }
+
+
