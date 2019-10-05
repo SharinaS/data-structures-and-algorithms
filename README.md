@@ -12,7 +12,7 @@ Sharina Stubbs
 * [Stacks and Queues](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
 * [Utilities - contains Animal Shelter and MultiBracket Validation](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
 
-# Code Challenges that Use Arrays
+# [Arrays Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges)
 * reverseArray()
 * arrayShift()
 * binarySearch()
@@ -59,7 +59,7 @@ Big 0 space - 0(n)
 ### Solution
 ![screenshot of page](code401Challenges/assets/binary-search.jpg)
 
-# Linked List Code Challenges
+# [Linked List Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist)
 Linked List contains these methods:
 * insertAtHead()
 * toString()
@@ -181,3 +181,16 @@ Big O:
 ### Whiteboarding
 I created an algorithm for this code challenge during my whiteboarding that I decided not to implement. When I started coding, I realized that using a stack would be easier to implement. 
 ![screenshot of page](code401Challenges/assets/bracket-validation.jpg)
+
+# [Trees Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
+
+## Methods in the Tree Package
+### BinarySearchTree Class
+* add
+* contains
+
+### BinaryTree Class
+* preOrder
+* inOrder
+* postOrder
+
