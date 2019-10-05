@@ -13,6 +13,7 @@ public class MultiBracketValidation {
         Stack<Character> charStack = new Stack<>();
 
         for(int i = 0; i < input.length(); i++) {
+
             if(input.charAt(i) == ')' || input.charAt(i) == ']' || input.charAt(i) == '}') {
                 charStack.push(input.charAt(i));
                 // pop off all the matching brackets
@@ -20,9 +21,16 @@ public class MultiBracketValidation {
                 charStack.pop();
             } else if (input.charAt(i) == '[' && !charStack.isEmpty() && charStack.peek() == ']'){
                 charStack.pop();
-            } else if (input.charAt(i) == '{' && !charStack.isEmpty() && charStack.peek() == '}'){
+            } else if (input.charAt(i) == '{' && !charStack.isEmpty() && charStack.peek() == '}') {
                 charStack.pop();
-                // if there's not a match, there's a lonely bracket in there.
+
+            } else if (input.charAt(i) != ')' ||
+                            input.charAt(i) != ']' ||
+                            input.charAt(i) != '}' ||
+                            input.charAt(i) != '(' ||
+                            input.charAt(i) != '[' ||
+                            input.charAt(i) != '{') {
+                continue;
             } else {
                 return false;
             }
