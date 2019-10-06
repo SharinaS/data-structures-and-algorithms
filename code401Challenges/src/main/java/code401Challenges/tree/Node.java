@@ -1,5 +1,7 @@
 package code401Challenges.tree;
 
+// Node Class for Trees
+
 public class Node <T> {
     // instance variables
     Node <T> left;
