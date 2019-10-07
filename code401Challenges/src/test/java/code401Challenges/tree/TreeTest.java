@@ -8,46 +8,70 @@ import static org.junit.Assert.*;
 
 public class TreeTest {
 
+    // check that empty tree can be instantiated
+//    @Test
+//    public void testTreeInstantiated() {
+//        Tree testTree = new Tree();
+//        Node<Integer> n = new Node<>(50);
+//
+//        Object[] goodAnswer = new Object[]{};
+//        assertArrayEquals(goodAnswer);
+//
+//    }
 
     @Test
     public void testPreOrderTraversal() {
-        Tree testTree = new Tree();
+
         Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
 
-        Object[] goodAnswer = new Object[]{1, 2, 3};
+        Tree testTree = new Tree(root);
+
+        ArrayList<Integer> goodAnswer = new ArrayList<>();
+        goodAnswer.add(1);
+        goodAnswer.add(2);
+        goodAnswer.add(3);
 
         assertArrayEquals(
                 "Should get [1, 2, 3]",
-                goodAnswer,
-                testTree.preOrderTraversal(root));
+                goodAnswer.toArray(),
+                testTree.preOrderTraversal().toArray()
+        );
     }
 
     @Test
     public void testInOrderTraversal() {
-        Tree testTree = new Tree();
         Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
 
-        Object[] goodAnswer = new Object[]{2, 1, 3};
+        Tree testTree = new Tree(root);
 
-        assertArrayEquals("Should get [2, 1, 3]", goodAnswer,
-        testTree.inOrderTraversal(root));
+        ArrayList<Integer> goodAnswer = new ArrayList<>();
+        goodAnswer.add(1);
+        goodAnswer.add(2);
+        goodAnswer.add(3);
+
+        assertArrayEquals("Should get [2, 1, 3]", goodAnswer.toArray(),
+        testTree.inOrderTraversal().toArray());
     }
 
     @Test
     public void testPostOrderTraversal() {
-        Tree testTree = new Tree();
         Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
 
-        Object[] goodAnswer = new Object[]{2, 3, 1};
+        Tree testTree = new Tree(root);
 
-        assertArrayEquals("Should get [2, 3, 1]", goodAnswer,
-                testTree.postOrderTraversal(root));
+        ArrayList<Integer> goodAnswer = new ArrayList<>();
+        goodAnswer.add(1);
+        goodAnswer.add(2);
+        goodAnswer.add(3);
+
+        assertArrayEquals("Should get [2, 3, 1]", goodAnswer.toArray(),
+                testTree.postOrderTraversal().toArray());
     }
 
 
