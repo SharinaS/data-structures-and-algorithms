@@ -10,33 +10,33 @@ public class MultiBracketValidation {
 
     public static boolean multiBracketValidation (String input) {
 
-        Stack<Character> charStack = new Stack<>();
+        Stack<String> bracketsCollection = new Stack<>();
 
-        for(int i = 0; i < input.length(); i++) {
+        if (input.length() < 2) {
+            return false;
+        }
 
-            if(input.charAt(i) == ')' || input.charAt(i) == ']' || input.charAt(i) == '}') {
-                charStack.push(input.charAt(i));
-                // pop off all the matching brackets
-            } else if (input.charAt(i) == '(' && !charStack.isEmpty() && charStack.peek() == ')'){
-                charStack.pop();
-            } else if (input.charAt(i) == '[' && !charStack.isEmpty() && charStack.peek() == ']'){
-                charStack.pop();
-            } else if (input.charAt(i) == '{' && !charStack.isEmpty() && charStack.peek() == '}') {
-                charStack.pop();
+        for(int i = 0; i < input.length(); i++){
+            String strEle = Character.toString(input.charAt(i));
 
-            } else if (input.charAt(i) != ')' ||
-                            input.charAt(i) != ']' ||
-                            input.charAt(i) != '}' ||
-                            input.charAt(i) != '(' ||
-                            input.charAt(i) != '[' ||
-                            input.charAt(i) != '{') {
-                continue;
-            } else {
-                return false;
+            if (strEle.equals('(') || strEle.equals('[') || strEle.equals('{')) {
+                bracketsCollection.push(strEle);
+
+            } else if (strEle.equals(')')) {
+                if(!bracketsCollection.pop().equals('(')) {
+                    return false;
+                }
+            } else if (strEle.equals(']')) {
+                if(!bracketsCollection.pop().equals('[')) {
+                    return false;
+                }
+            } else if (strEle.equals('}')) {
+                if(!bracketsCollection.pop().equals('{')) {
+                    return false;
+                }
             }
         }
-        //if there are no open parens left in stack, return true...
-        return charStack.isEmpty();
+        return true;
     }
 }
 

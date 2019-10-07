@@ -8,10 +8,21 @@ public class Node <T> {
     Node <T> right;
     T value;
 
+
     // constructor
     public Node (T value) {
         this.value = value;
         this.left = null;
         this.right = null;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "left=" + left +
+                ", right=" + right +
+                ", value=" + value +
+                '}';
     }
 }
