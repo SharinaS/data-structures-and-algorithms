@@ -9,41 +9,83 @@ import java.util.ArrayList;
 
 public class Tree<T> {
 
-    private ArrayList<T> valuesArr = new ArrayList<>();
+    private Node <T> root;
+
+    public Tree() {
+        root = null;
+    }
+
+    public Tree(Node<T> root) {
+        this.root = root;
+    }
 
     // PreOrder Traversal
-    public Object [] preOrderTraversal(Node<T> root) {
-        valuesArr.add(root.value);
+
+    public ArrayList<T> preOrderTraversal() {
+        ArrayList<T> valuesArr = new ArrayList<>();
+        preOrderTraversalHelper(this.root, valuesArr);
+        return valuesArr;
+    }
+
+    private ArrayList<T> preOrderTraversalHelper(Node<T> root, ArrayList<T> valuesArr) {
+        if(root == null) {
+            return valuesArr;
+        }
+
+        valuesArr.add((T) root.value);
+
         if(root.left != null){
-            preOrderTraversal(root.left);
+            valuesArr = preOrderTraversalHelper(root.left, valuesArr);
         }
         if(root.right != null){
-            preOrderTraversal((root.right));
+            valuesArr = preOrderTraversalHelper(root.right, valuesArr);
         }
-        return valuesArr.toArray();
+        return valuesArr;
     }
+
+
 
     // InOrderTraversal
-    public Object[] inOrderTraversal (Node<T> root) {
-        if(root.left != null) {
-            inOrderTraversal(root.left);
-        }
-        valuesArr.add(root.value);
-        if(root.right != null) {
-            inOrderTraversal(root.right);
-        }
-        return valuesArr.toArray();
+    public ArrayList<T> inOrderTraversal() {
+        ArrayList<T> valuesArr = new ArrayList<>();
+        preOrderTraversalHelper(this.root, valuesArr);
+        return valuesArr;
     }
 
-    // PostOrder Traversal
-    public Object[] postOrderTraversal(Node<T> root) {
-        if(root.left !=null) {
-            postOrderTraversal(root.left);
+    private ArrayList<T> inOrderTraversalHelper(Node<T> root, ArrayList<T> valuesArr) {
+        if(root == null) {
+            return valuesArr;
         }
-        if(root.right != null) {
-            postOrderTraversal(root.right);
+        if(root.left != null){
+            valuesArr = preOrderTraversalHelper(root.left, valuesArr);
         }
-        valuesArr.add(root.value);
-        return valuesArr.toArray();
+        valuesArr.add((T) root.value);
+        if(root.right != null){
+            valuesArr = preOrderTraversalHelper(root.right, valuesArr);
+        }
+        return valuesArr;
     }
+
+
+    // PostOrder Traversal
+    public ArrayList<T> postOrderTraversal() {
+        ArrayList<T> valuesArr = new ArrayList<>();
+        preOrderTraversalHelper(this.root, valuesArr);
+        return valuesArr;
+    }
+
+    private ArrayList<T> postOrderTraversalHelper(Node<T> root, ArrayList<T> valuesArr) {
+        if(root == null) {
+            return valuesArr;
+        }
+        if(root.left != null){
+            valuesArr = preOrderTraversalHelper(root.left, valuesArr);
+        }
+        if(root.right != null){
+            valuesArr = preOrderTraversalHelper(root.right, valuesArr);
+        }
+        valuesArr.add((T) root.value);
+        return valuesArr;
+    }
+    
 }

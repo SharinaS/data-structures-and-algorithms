@@ -23,9 +23,6 @@ public class BinarySearchTree {
 
     // recursive method to do the insertion
     private Node <Integer> addingHelp(Node <Integer> curr, Integer value) {
-//        if (value < curr.value) {
-//            if (curr.left )
-//        }
 
         if (curr == null) {
             return new Node<>(value);
