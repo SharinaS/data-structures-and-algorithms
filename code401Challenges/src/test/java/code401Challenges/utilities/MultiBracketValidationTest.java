@@ -6,10 +6,12 @@ import static org.junit.Assert.*;
 
 public class MultiBracketValidationTest {
 
+    // Tests # 3 and # 7 are still failing
+
     @Test
     public void multiBracketValidation() {
         MultiBracketValidation testMultiB = new MultiBracketValidation();
-        assertTrue(testMultiB.multiBracketValidation("[hello]"));
+        assertTrue(testMultiB.multiBracketValidation("[hello there]"));
     }
 
     @Test
@@ -21,7 +23,8 @@ public class MultiBracketValidationTest {
     @Test
     public void multiBracketValidation3() {
         MultiBracketValidation testMultiB = new MultiBracketValidation();
-        assertFalse(testMultiB.multiBracketValidation("[0)]"));
+
+        assertFalse(testMultiB.multiBracketValidation("[({}]"));
     }
 
     @Test
