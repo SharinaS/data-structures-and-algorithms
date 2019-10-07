@@ -19,24 +19,24 @@ public class MultiBracketValidation {
         for(int i = 0; i < input.length(); i++){
             String strEle = Character.toString(input.charAt(i));
 
-            if (strEle.equals('(') || strEle.equals('[') || strEle.equals('{')) {
+            if (strEle.equals("(") || strEle.equals("[") || strEle.equals("{")) {
                 bracketsCollection.push(strEle);
 
-            } else if (strEle.equals(')')) {
-                if(!bracketsCollection.pop().equals('(')) {
+            } else if (strEle.equals(")")) {
+                if(!bracketsCollection.pop().equals("(")) {
                     return false;
                 }
-            } else if (strEle.equals(']')) {
-                if(!bracketsCollection.pop().equals('[')) {
+            } else if (strEle.equals("]")) {
+                if(!bracketsCollection.pop().equals("[")) {
                     return false;
                 }
-            } else if (strEle.equals('}')) {
-                if(!bracketsCollection.pop().equals('{')) {
+            } else if (strEle.equals("}")) {
+                if(!bracketsCollection.pop().equals("{")) {
                     return false;
                 }
             }
         }
-        return true;
+        return bracketsCollection.isEmpty();
     }
 }
 
