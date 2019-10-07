@@ -4,9 +4,9 @@ package code401Challenges.tree;
 
 public class Node <T> {
     // instance variables
-    Node <T> left;
-    Node <T> right;
-    T value;
+    public Node <T> left;
+    public Node <T> right;
+    public T value;
 
 
     // constructor
