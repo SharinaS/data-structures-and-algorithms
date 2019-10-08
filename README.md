@@ -10,7 +10,7 @@ Sharina Stubbs
 * [Binary Search](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
 * [Linked List](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist) 
 * [Stacks and Queues](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
-* [Utilities - contains Animal Shelter and MultiBracket Validation](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
+* [Utilities - contains Animal Shelter,MultiBracket Validation, and FizzBuzzTree](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
 * [PseudoQueue](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
 * [Trees](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
 
@@ -198,3 +198,21 @@ Recursion heavily relied upon for the following classes.
 * inOrder
 * postOrder
 
+## [FizzBuzzTree](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/utilities/FizzBuzzTree.java)
+FizzBuzzTree class is actually contained within the Utilites Package, however it is built with the use of tree nodes. 
+
+### Problem Domain:
+Write a function called FizzBuzzTree which takes a tree as an argument.
+Without utilizing any of the built-in methods available to your language, determine weather or not the value of each node is divisible by 3, 5 or both, and change the value of each of the nodes:
+* If the value is divisible by 3, replace the value with “Fizz”
+* If the value is divisible by 5, replace the value with “Buzz”
+* If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+
+Return the tree with its new values.
+
+### Efficiency for FizzBuzzTree:
+* Time complexity: O(n)
+* Space complexity: O(1)
+
+### Whiteboarding image:
+![image of whiteboard](code401Challenges/assets/fizzbuzz-tree.jpg)
