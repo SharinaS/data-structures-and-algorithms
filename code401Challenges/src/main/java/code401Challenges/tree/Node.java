@@ -16,13 +16,9 @@ public class Node <T> {
         this.right = null;
     }
 
-
-    @Override
-    public String toString() {
-        return "Node{" +
-                "left=" + left +
-                ", right=" + right +
-                ", value=" + value +
-                '}';
+    public Node(T value, Node<T> left, Node<T> right) {
+        this.value = value;
+        this.left = left;
+        this.right = right;
     }
 }

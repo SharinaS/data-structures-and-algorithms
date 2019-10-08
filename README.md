@@ -188,6 +188,7 @@ I created an algorithm for this code challenge during my whiteboarding that I de
 # [Trees Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
 
 ## Methods in the Tree Package
+Recursion heavily relied upon for the following classes.
 ### BinarySearchTree Class
 * add
 * contains
