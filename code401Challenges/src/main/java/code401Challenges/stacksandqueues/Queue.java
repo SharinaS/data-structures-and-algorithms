@@ -55,6 +55,10 @@ public class Queue<T> {
         }
     }
 
+    public boolean isEmpty() {
+        return this.front == null;
+    }
+
 
 
 } //end of the Class

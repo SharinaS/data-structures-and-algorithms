@@ -122,6 +122,7 @@ Queue Methods:
 * enqueue();
 * dequeue();
 * peep();
+* isEmpty();
 
 PseudoQueue Methods:
 * enqueue();
@@ -189,17 +190,21 @@ I created an algorithm for this code challenge during my whiteboarding that I de
 
 ## Methods in the Tree Package
 Recursion heavily relied upon for the following classes.
-### BinarySearchTree Class
-* add
-* contains
+### [Binary Search Tree Class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/tree/BinarySearchTree.java)
+* add();
+* contains();
 
-### BinaryTree Class
-* preOrder
-* inOrder
-* postOrder
+### [Binary Tree Class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/tree/Tree.java)
+* preOrder();
+* inOrder();
+* postOrder();
+* breadthfirstTraverse();
+
+**BreadthFirstTraverse** is a method that prints out values of a binary tree. It is implemented using a queue (from this repo's queue class) and a while loop. It takes in a tree, and outputs integers. 
+![image of whiteboard](code401Challenges/assets/breadth-first-traverse.jpg)
 
 ## [FizzBuzzTree](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/utilities/FizzBuzzTree.java)
-FizzBuzzTree class is actually contained within the Utilites Package, however it is built with the use of tree nodes. 
+FizzBuzzTree class is actually contained within the Utilites Package, however it is built with a tree in mind, therefore it is lumped with Trees.
 
 ### Problem Domain:
 Write a function called FizzBuzzTree which takes a tree as an argument.
@@ -216,3 +221,5 @@ Return the tree with its new values.
 
 ### Whiteboarding image:
 ![image of whiteboard](code401Challenges/assets/fizzbuzz-tree.jpg)
+
+

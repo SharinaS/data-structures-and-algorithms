@@ -10,9 +10,6 @@ import code401Challenges.tree.Node;
 public class FizzBuzzTree {
     Node <String> root;
 
-    public FizzBuzzTree () {
-        root = null;
-    }
 
     public FizzBuzzTree(Node <String> root) {
         this.root = root;
