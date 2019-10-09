@@ -1,6 +1,9 @@
 package code401Challenges.tree;
 
+import code401Challenges.stacksandqueues.Queue;
+
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class Tree<T> {
 
@@ -36,7 +39,6 @@ public class Tree<T> {
         }
         return valuesArr;
     }
-
 
 
     //========= InOrderTraversal
@@ -76,10 +78,7 @@ public class Tree<T> {
 //    }
 
 
-
-
-
-    // PostOrder Traversal
+    // ======= PostOrder Traversal
     public ArrayList<T> postOrderTraversal() {
         ArrayList<T> valuesArr = new ArrayList<>();
         preOrderTraversalHelper(this.root, valuesArr);
@@ -99,5 +98,27 @@ public class Tree<T> {
         valuesArr.add((T) root.value);
         return valuesArr;
     }
+
+    // ======= Breadth First Traversal, using a queue, for numbers
+    public void breadthFirstTraverse (Node<Integer> root) {
+        Queue<Integer> storageQ = new Queue<>();
+
+        if (root == null) {
+            throw new NoSuchElementException();
+        } else {
+            storageQ.enqueue(root.value);
+        }
+
+        while (!storageQ.isEmpty()) {
+            Integer currNode = storageQ.dequeue();
+            System.out.println(currNode);
+            if (root.left != null) {
+                storageQ.enqueue(root.left.value);
+            }
+            if (root.right != null)
+                storageQ.enqueue(root.right.value);
+            }
+    }
+
 
 }
