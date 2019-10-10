@@ -10,7 +10,7 @@ Sharina Stubbs
 * [Binary Search](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
 * [Linked List](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist) 
 * [Stacks and Queues](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
-* [Utilities - contains Animal Shelter,MultiBracket Validation, and FizzBuzzTree](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
+* [Utilities - contains Animal Shelter, MultiBracket Validation, and FizzBuzzTree](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
 * [PseudoQueue](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
 * [Trees](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
 
@@ -156,7 +156,7 @@ To enqueue, one can push a value directly to stack1. To dequeue, the stack must 
 ### Algorithm and pseudocode
 ![screenshot of page](code401Challenges/assets/queue-with-stacks.jpg)
 
-## Challenge: Build an Animal Shelter Class
+## Challenge: [Build an Animal Shelter Class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/utilities/AnimalShelter.java)
 Challenge description: "Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach. Implement the following methods - enqueue(animal: adds animal to the shelter. animal can be either a dog or a cat object. dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null."
 
 ### Whiteboarding:
@@ -199,9 +199,13 @@ Recursion heavily relied upon for the following classes.
 * inOrder();
 * postOrder();
 * breadthfirstTraverse();
+* findMaxValue();
 
-**BreadthFirstTraverse** is a method that prints out values of a binary tree. It is implemented using a queue (from this repo's queue class) and a while loop. It takes in a tree, and outputs integers. 
+**BreadthFirstTraverse** is a method in the Binary Tree Class that prints out values of a binary tree. It is implemented using a queue (from this repo's queue class) and a while loop. It takes in a tree, and outputs integers. 
 ![image of whiteboard](code401Challenges/assets/breadth-first-traverse.jpg)
+
+**FindMaxValue** is an instance method in the Binary Tree Class that returns the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric. There are two variables that keep track of the current highest value, and the highest value found thus far. The method is built using recursion to do a pre-order traversal of the tree.
+![image of whiteboard](code401Challenges/assets/find-max-value.jpg)
 
 ## [FizzBuzzTree](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/utilities/FizzBuzzTree.java)
 FizzBuzzTree class is actually contained within the Utilites Package, however it is built with a tree in mind, therefore it is lumped with Trees.

@@ -100,6 +100,8 @@ public class Tree<T> {
     }
 
     // ======= Breadth First Traversal, using a queue, for numbers
+    // Michelle solution: https://github.com/codefellows/seattle-java-401d6/blob/master/class-18/Tree.java
+
     public void breadthFirstTraverse (Node<Integer> root) {
         Queue<Integer> storageQ = new Queue<>();
 
@@ -118,7 +120,56 @@ public class Tree<T> {
             if (root.right != null)
                 storageQ.enqueue(root.right.value);
             }
+        // return a string
+        // make a node of Integer
     }
 
+//    // ======= Find Max Value in a Binary Tree -- FAILURE VERSION #1 Why does it have a null pointer?
+//    public int findMaxValue() {
+//        return preOrderMaxFinder(this.root);
+//    }
+//
+//    public int highest = (int) root.value;
+//    private int preOrderMaxFinder(Node curr) {
+//        int tempVal = (int) curr.value;
+//
+//        if(curr == null) {
+//            return highest;
+//        }
+//
+//        if(tempVal > highest) {
+//            highest = tempVal;
+//        }
+//        if (curr.left != null) {
+//            preOrderMaxFinder(curr.left);
+//        }
+//        if (curr.right != null) {
+//            preOrderMaxFinder(curr.right);
+//        }
+//        return highest;
+//    }
+
+    // ======= Find Max Value in a Binary Tree
+
+    public int findMaxValue() {
+        return preOrderMaxFinder(this.root)
+    }
+
+    private  int preOrderMaxFinder(Node curr, int highest) {
+        if (curr == null) {
+            return highest;
+        }
+
+        if(curr.value > highest) {
+            highest = curr.value;
+        }
+        if (curr.left != null) {
+            preOrderMaxFinder(curr.left);  // what is this line actually doing? Is it letting us traverse? Or should highest be set to it?
+        }
+        if (curr.right != null) {
+            preOrderMaxFinder(curr.right);
+        }
+        return highest;
+    }
 
 }
