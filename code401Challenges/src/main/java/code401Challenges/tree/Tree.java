@@ -81,6 +81,7 @@ public class Tree<T> {
     // ======= PostOrder Traversal
     public ArrayList<T> postOrderTraversal() {
         ArrayList<T> valuesArr = new ArrayList<>();
+
         preOrderTraversalHelper(this.root, valuesArr);
         return valuesArr;
     }
@@ -99,7 +100,7 @@ public class Tree<T> {
         return valuesArr;
     }
 
-    // ======= Breadth First Traversal, using a queue, for numbers
+    // ======= Breadth First Traversal, using a queue, for numbers =======
     // Michelle solution: https://github.com/codefellows/seattle-java-401d6/blob/master/class-18/Tree.java
 
     public void breadthFirstTraverse (Node<Integer> root) {
@@ -123,40 +124,23 @@ public class Tree<T> {
         // return a string
         // make a node of Integer
     }
+/////////////////
 
-//    // ======= Find Max Value in a Binary Tree -- FAILURE VERSION #1 Why does it have a null pointer?
-//    public int findMaxValue() {
-//        return preOrderMaxFinder(this.root);
-//    }
-//
-//    public int highest = (int) root.value;
-//    private int preOrderMaxFinder(Node curr) {
-//        int tempVal = (int) curr.value;
-//
-//        if(curr == null) {
-//            return highest;
-//        }
-//
-//        if(tempVal > highest) {
-//            highest = tempVal;
-//        }
-//        if (curr.left != null) {
-//            preOrderMaxFinder(curr.left);
-//        }
-//        if (curr.right != null) {
-//            preOrderMaxFinder(curr.right);
-//        }
-//        return highest;
-//    }
-
-    // ======= Find Max Value in a Binary Tree
-
+//    // ======= Find Max Value in a Binary Tree =======
     public int findMaxValue() {
-        return preOrderMaxFinder(this.root)
+        if (this.root.value instanceof Integer){
+            return preOrderMaxFinder((Node<Integer>) this.root, Integer.MIN_VALUE);
+        } else {
+            throw new IllegalStateException();
+        }
+
     }
 
-    private  int preOrderMaxFinder(Node curr, int highest) {
-        if (curr == null) {
+
+    private int preOrderMaxFinder(Node <Integer> curr, int highest) {
+
+
+        if(curr == null) {
             return highest;
         }
 
@@ -164,10 +148,10 @@ public class Tree<T> {
             highest = curr.value;
         }
         if (curr.left != null) {
-            preOrderMaxFinder(curr.left);  // what is this line actually doing? Is it letting us traverse? Or should highest be set to it?
+            highest = preOrderMaxFinder(curr.left, highest);
         }
         if (curr.right != null) {
-            preOrderMaxFinder(curr.right);
+            highest = preOrderMaxFinder(curr.right, highest);
         }
         return highest;
     }
