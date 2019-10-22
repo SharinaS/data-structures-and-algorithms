@@ -3,6 +3,8 @@ package code401Challenges.tree;
 import code401Challenges.stacksandqueues.Queue;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class Tree<T> {
@@ -103,27 +105,36 @@ public class Tree<T> {
     // ======= Breadth First Traversal, using a queue, for numbers =======
     // Michelle solution: https://github.com/codefellows/seattle-java-401d6/blob/master/class-18/Tree.java
 
-    public void breadthFirstTraverse (Node<Integer> root) {
-        Queue<Integer> storageQ = new Queue<>();
-
-        if (root == null) {
-            throw new NoSuchElementException();
-        } else {
-            storageQ.enqueue(root.value);
-        }
-
-        while (!storageQ.isEmpty()) {
-            Integer currNode = storageQ.dequeue();
-            System.out.println(currNode);
-            if (root.left != null) {
-                storageQ.enqueue(root.left.value);
-            }
-            if (root.right != null)
-                storageQ.enqueue(root.right.value);
-            }
-        // return a string
-        // make a node of Integer
-    }
+    // TO DO: FIX ERROR IN THIS CODE
+//    public List<T> breadthFirstSearch() {
+//        return breadthFirstTraverse(this.root);
+//    }
+//
+//    public static <T> List<T> breadthFirstTraverse (Node<T> root) {
+//        Queue<Node<T>> storageQ = new LinkedList<>();
+//        List<T> result = new LinkedList<>();
+//
+//        // put the root into the queue to process first.
+//        if (root == null) {
+//            throw new NoSuchElementException();
+//        } else {
+//            storageQ.enqueue(root);
+//        }
+//
+//        // process rest of the nodes, while there are nodes left
+//        while (!storageQ.isEmpty()) {
+//            Node<T> currNode = storageQ.dequeue();
+//
+//            result.add(currNode.value);
+//
+//            if (currNode.left != null) {
+//                storageQ.enqueue(currNode.left);
+//            }
+//            if (root.right != null)
+//                storageQ.enqueue(currNode.right);
+//            }
+//        return result;
+//    }
 /////////////////
 
 //    // ======= Find Max Value in a Binary Tree =======
@@ -136,9 +147,7 @@ public class Tree<T> {
 
     }
 
-
     private int preOrderMaxFinder(Node <Integer> curr, int highest) {
-
 
         if(curr == null) {
             return highest;
@@ -156,4 +165,45 @@ public class Tree<T> {
         return highest;
     }
 
+    // ====== Fun Way to Find Max in a Tree from Michelle Ferreirae =========
+    public int findMax_weird(Node<Integer> root) {
+        if(root == null) {
+            return Integer.MIN_VALUE;
+        }
+        return Math.max(root.value, Math.max(findMax_weird(root.left), findMax_weird(root.right)));
+    }
+
+    // ======= Find Min Value in a Tree from Michelle Ferreirae =========
+    public int findMin_weird(Node<Integer> root) {
+        if(root == null) {
+            return Integer.MAX_VALUE;
+        }
+        return Math.min(root.value, Math.min(findMax_weird(root.left), findMin_weird(root.right)));
+    }
+
+    // ====== Find Sum of nodes in a Tree from Michelle Ferreirae ========
+
+    public int sum(Node<Integer> root) {
+        // base case
+        if (root == null) {
+            return 0;
+        }
+        // recursion
+        return sum(root.left) + sum(root.right) + root.value;
+    }
+
+    // ====== Find number of leaves in a Tree from Michelle Ferreirae ========
+    // if we get to where root is null, there's not a leaf there, so return 0.
+    // if we get to a leaf, count it, return 1.
+    // otherwise, figure out how many leaves on each side and add them up.
+
+    public int countLeaves(Node<T> root) {
+        if(root == null) {
+            return 0;
+        } else if ( root.left == null && root.right == null ) {
+            return 1;
+        } else {
+            return countLeaves(root.left) + countLeaves(root.right);
+        }
+    }
 }

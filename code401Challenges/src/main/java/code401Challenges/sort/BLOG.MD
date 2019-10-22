@@ -2,32 +2,28 @@
 
 Insertion is a simple sorting algorithm that works the way humans sort a hand of cards. 
 
-Is it more efficient than others? How does it attack the problem differently?
+It does not have good time complexity of big o of n. It is O(n^2). This is because in the worst case scenario, you have to swap and compare every single item if the array starts in decreasing order. For smaller sets of data, however, perhaps less than 1000 items, it can be fairly fast.
 
 ## Learning Objectives
-* What
-* Will
-* The 
-* Students
-* Learn
-* Today
+* Understand what a storted list does, what it is not good at, and how it sorts a list.
 
 ## Information Flow
 
-* Main Point
-  * Supporting Points
-* Another main point
-  * More details
-  * Go here 
+* Array is sorted in place
+  * Items are rearranged within the array
+* We start from the second item
+  * An array with only one item is a sorted list. 
+* If the item at index i (called a key) is smaller than the value of the item at index j, then the key moves one position to the left ([Baeldung](https://www.baeldung.com/java-insertion-sort))
   
 ## Diagram
-
-Include your "Visual" here
+From [Geeks for Geeks](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiU0NHk6K7lAhXuHTQIHXBWDKoQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.geeksforgeeks.org%2Finsertion-sort%2F&psig=AOvVaw1nYanfQCDzyfBPIShuHQCc&ust=1571797675549321)
+![insertion sort](/code401Challenges/assets/insertionsort.png)
 
 ## Algorithm
 
-Describe in detail how the algorithm works.
-Include small code snippets to possibly support the points
+1. Work left to right
+2. Examine each item and compare that item to items on its left.
+3. Insert the item in the correct position in the array, given the item's value.
 
 ## Pseudocode
 ````
@@ -48,11 +44,11 @@ InsertionSort(int[] arr)
 ## Readings and References
 
 **Watch**
-* [Video](http://link-to-amazing-video)
+* [Khan Academy's Insertion Sort](https://www.youtube.com/watch?v=lCzQvQr8Utw)
 
 **Read**
-* [Insertion Sort](https://www.geeksforgeeks.org/insertion-sort/)
-* [Insertion Sort in Java](https://www.baeldung.com/java-insertion-sort)
+* [Insertion Sort from Geeks for Geeks](https://www.geeksforgeeks.org/insertion-sort/)
+* [Insertion Sort in Java from Baeldung](https://www.baeldung.com/java-insertion-sort)
 
 **Bookmark**
 * [Insertion Sort Visualizer](https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/)
