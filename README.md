@@ -4,6 +4,12 @@ Includes Code challenges from Code301d50 course and from Code401Javad6. All desc
 ## Contributor
 Sharina Stubbs
 
+# [Sorting Algorithms](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/sort)
+### Insertion Sort
+* [The Code](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/sort/InsertionSort.java)
+* [The Blog](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/sort/BLOG.MD)
+
+
 # Data Structures Found Within:
 * [Reverse Array](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java)
 * [Array Shift](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayShift.java)
@@ -13,7 +19,6 @@ Sharina Stubbs
 * [Utilities - contains Animal Shelter, MultiBracket Validation, and FizzBuzzTree](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
 * [PseudoQueue](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
 * [Trees](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
-
 
 # [Arrays Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges)
 * reverseArray()
