@@ -1,3 +1,7 @@
+# Sorting Algorithms Discussed Here:
+* [Insertion Sort](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/sort/InsertionSort.java)
+* [Merge Sort](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/sort/MergeSort.java)
+
 # Insertion Sort
 
 Insertion is a simple sorting algorithm that works the way humans sort a hand of cards. 

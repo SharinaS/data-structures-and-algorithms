@@ -23,20 +23,20 @@ public class MergeSort {
         merge(arr, leftArr, rightArr, mid, length - mid);
     }
 
-    public static void merge(int[] a, int[] l, int[] r, int left, int right) {
+    public static void merge(int[] arr, int[] leftArr, int[] rightArr, int left, int right) {
         int i = 0, j = 0, k = 0;
         while (i < left && j < right) {
-            if (l[i] <= r[j]) {
-                a[k++] = l[i++];
+            if (leftArr[i] <= rightArr[j]) {
+                arr[k++] = leftArr[i++];
             } else {
-                a[k++] = r[j++];
+                arr[k++] = rightArr[j++];
             }
         }
         while (i < left) {
-            a[k++] = l[i++];
+            arr[k++] = leftArr[i++];
         }
         while (j < right) {
-            a[k++] = r[j++];
+            arr[k++] = rightArr[j++];
         }
     }
 }
