@@ -1,6 +1,8 @@
-# Blog Notes: Insertion Sort
+# Insertion Sort
 
 Insertion is a simple sorting algorithm that works the way humans sort a hand of cards. 
+
+It is a good algorithm to use when you are receiving a new piece of data. It is good for maintaining a sorted thing as new pieces of data are being added in.
 
 It does not have good time complexity of big o of n. It is O(n^2). This is because in the worst case scenario, you have to swap and compare every single item if the array starts in decreasing order. For smaller sets of data, however, perhaps less than 1000 items, it can be fairly fast.
 
@@ -52,3 +54,82 @@ InsertionSort(int[] arr)
 
 **Bookmark**
 * [Insertion Sort Visualizer](https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/)
+
+# Merge Sort
+Merge sort is a Divide and Conquer algorithm. We divide by recursively splitting up the array into two parts. We conquer when we sort and merge the two arrays from bottom to top.
+
+### Eficiency
+* Time Complexity: O(n log n)
+* Space Complexity: O(n)
+
+### Downside: 
+It does require creating extra space on the callstack, since a new array is required to be built from the two original arrays.
+
+## Learning Objectives
+* Understand what a merge sort does
+* Pseudocode for merge sort
+* Java code for merge sort
+* See what great references there are out there.
+
+## Diagram
+From [Wikipedia](https://en.wikipedia.org/wiki/File:Merge_sort_algorithm_diagram.svg):
+![merge sort](/code401Challenges/assets/merge-sort.png)
+
+## Algorithm
+Divide an input array into two halves. The pivot is the midpoint of the array.Do this recursively for all the half arrays until there are no more half arrays to divide. Sort and merge the divided arrays from bottom to top, to ultimately get the sorted array ([Baeldung](https://www.baeldung.com/java-merge-sort))
+
+
+## Pseudocode
+```
+ALGORITHM Mergesort(arr)
+    DECLARE n <-- arr.length
+           
+    if n > 1
+      DECLARE mid <-- n/2
+      DECLARE left <-- arr[0...mid]
+      DECLARE right <-- arr[mid...n]
+      // sort the left side
+      Mergesort(left)
+      // sort the right side
+      Mergesort(right)
+      // merge the sorted left and right sides together
+      Merge(left, right, arr)
+
+ALGORITHM Merge(left, right, arr)
+    DECLARE i <-- 0
+    DECLARE j <-- 0
+    DECLARE k <-- 0
+
+    while i < left.length && j < right.length
+        if left[i] <= right[j]
+            arr[k] <-- left[i]
+            i <-- i + 1
+        else
+            arr[k] <-- right[j]
+            j <-- j + 1
+            
+        k <-- k + 1
+
+    if i = left.length
+       set remaining entries in arr to remaining values in right
+    else
+       set remaining entries in arr to remaining values in left
+
+```
+
+## Readings and References
+
+**Watch**
+
+[Algorithms: Merge Sort](https://www.youtube.com/watch?v=KF2j-9iSf4Q)  with Gayle Laakmann McDowell, from Cracking the Coding Interview.
+
+**Read**
+
+[Merge Sort in Java](https://www.baeldung.com/java-merge-sort) by baeldung. 
+
+**Bookmark**
+
+[Merge sort visualization(2500 elements)](https://www.youtube.com/watch?v=_r0gV2hQYf0)
+
+
+
