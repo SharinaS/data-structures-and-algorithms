@@ -23,6 +23,7 @@ public class MergeSort {
         merge(arr, leftArr, rightArr, mid, length - mid);
     }
 
+    // k refers to i + j
     public static void merge(int[] arr, int[] leftArr, int[] rightArr, int left, int right) {
         int i = 0, j = 0, k = 0;
         while (i < left && j < right) {
