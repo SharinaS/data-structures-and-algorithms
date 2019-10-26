@@ -148,7 +148,7 @@ This is a faster algorithm in practice. The code you write to move code around i
 Quicksort is not a stable algorithm. A stable sorting algorithm is one in which the elements with the same values appear in the same order in the sorted output as they appear in the input list.
 
 ### Quicksort Vs MergeSort 
-Quickwort is often preferred over mergesort, due to the differences in space complexity. MergeSort requires O(n) space complexity, which is expensive for large arrays, while quicksort only requires O(n log n).
+Quicksort is often preferred over mergesort, due to the differences in space complexity. MergeSort requires O(n) space complexity, which is expensive for large arrays, while quicksort only requires O(n log n).
 
 ### Time Complexity: 
 * Worst case is O(n^2)
@@ -165,7 +165,7 @@ O(n log n)
 
 ## Diagram
 Quicksort Diagram, from [Hackerrank](https://www.hackerrank.com/challenges/quicksort2/problem)
-![quick-sort diagram](/code401Challenges/assets/merge-sort.png)
+![quick-sort diagram](/code401Challenges/assets/quick-sort.png)
 
 ## Algorithm
 ### Basic Algorithm

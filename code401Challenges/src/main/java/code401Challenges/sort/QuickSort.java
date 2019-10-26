@@ -4,7 +4,7 @@ public class QuickSort {
 
     // starting code from https://www.baeldung.com/java-quicksort
     // takes in an arr to be sorted, and the first and the last index of the array
-    public static void quickSort(int[] arr, int begin, int end) {
+    public static void quickSort(int[] arr, int begin, int end) {       // <---------- consider doing this with only input of array
         // only continue if there are elements to be sorted
         if (begin < end) {
             // get the index of the sorted pivot and use it to recursively call partition() method with different
