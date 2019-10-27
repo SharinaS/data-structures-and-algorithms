@@ -1,10 +1,9 @@
-# Data Structures and Algorithms
-Includes Code challenges from Code301d50 course and from Code401Javad6. All descriptions of code challenges that follow are from Code401 Java.
+Includes Code challenges from Two Code Fellows courses - Code301-d50 course and from Code401-Java-d6. All descriptions of code challenges that follow are from Code401 Java.
 
-## Contributor
+### Contributor
 Sharina Stubbs
 
-# [Sorting Algorithms](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/sort)
+# Sorting Algorithms
 Read about the algorithms: [The Blog](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/sort/BLOG.MD)
 * [Insertion Sort](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/sort/InsertionSort.java)
 * [Merge Sort](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/sort/MergeSort.java)
@@ -20,10 +19,10 @@ Read about the algorithms: [The Blog](https://github.com/SharinaS/data-structure
 * [PseudoQueue](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
 * [Trees](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
 
-# [Arrays Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges)
-* reverseArray()
-* arrayShift()
-* binarySearch()
+# Array Methods Include:
+* [reverseArray()](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java)
+* [arrayShift](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayShift.java)
+* [binarySearch()](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
 
 
 ## Reverse Array
@@ -67,8 +66,8 @@ Big 0 space - 0(n)
 ### Solution
 ![screenshot of page](code401Challenges/assets/binary-search.jpg)
 
-# [Linked List Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist)
-Linked List contains these methods:
+# Linked List Methods
+See the code [here](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist).
 * insertAtHead()
 * toString()
 * includes()
@@ -114,8 +113,8 @@ In place merge of two linked lists that uses a while loop to iterate through the
 
 ![screenshot of page](code401Challenges/assets/merge-list.jpg)
 
-# [Stacks and Queues Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
-Work is found within the package "stacksandqueues", and includes a node class, a queue class, a stack class, and a pseudoqueue class.
+# Stacks and Queues 
+The code is found within the package ["stacksandqueues"](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues), and includes a [node class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues/Node.java), a [queue class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues/Queue.java), a [stack class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues/Stack.java), and a [pseudoqueue class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues/PseudoQueue.java).
 
 Stack Methods:
 * push();
@@ -191,9 +190,9 @@ Big O:
 I created an algorithm for this code challenge during my whiteboarding that I decided not to implement. When I started coding, I realized that using a stack would be easier to implement. 
 ![screenshot of page](code401Challenges/assets/bracket-validation.jpg)
 
-# [Trees Code Challenges](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
+# Trees
 
-## Methods in the Tree Package
+## Methods in the [Tree Package](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
 Recursion heavily relied upon for the following classes.
 ### [Binary Search Tree Class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/tree/BinarySearchTree.java)
 * add();
