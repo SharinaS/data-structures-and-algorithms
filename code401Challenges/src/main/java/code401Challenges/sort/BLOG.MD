@@ -83,6 +83,9 @@ From [Wikipedia](https://en.wikipedia.org/wiki/File:Merge_sort_algorithm_diagram
 ## Algorithm
 Divide an input array into two halves. The pivot is the midpoint of the array.Do this recursively for all the half arrays until there are no more half arrays to divide. Sort and merge the divided arrays from bottom to top, to ultimately get the sorted array ([Baeldung](https://www.baeldung.com/java-merge-sort))
 
+### Another way of writing the algorithm:
+If the array is short, don't do anything - return input. Otherwise, mergesort the first half, mergesort the second half, and merge together those two results and return it. Merge can make a brand new array or modify the original array. Merge method uses conditionals to just use one loop. If either j is out of stuff, or i still has still has stuff and the thing at i is less than the thing at j, I want the thing from the first array. Otherwise, I want the thing from the second array. If we're out of stuff in the first array, we'll copy from the second array instead, in other words. We can also say i + j is the same as k.
+
 
 ## Pseudocode
 ```
