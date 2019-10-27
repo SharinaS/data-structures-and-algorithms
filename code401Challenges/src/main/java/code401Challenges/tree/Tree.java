@@ -196,6 +196,11 @@ public class Tree<T> {
     // if we get to where root is null, there's not a leaf there, so return 0.
     // if we get to a leaf, count it, return 1.
     // otherwise, figure out how many leaves on each side and add them up.
+    // Frontrow video on https://frontrowviews.com/Home/Event/Play/5d76a968bdb9b10d0cb5cdb7
+
+    // Algorithm: if we get to where root is null, and there's not a leaf there, return 0.
+    // If we get to a leaf, count it and return 1.
+    // Otherwise, figure out how many leaves on each side and add them up.
 
     public int countLeaves(Node<T> root) {
         if(root == null) {
