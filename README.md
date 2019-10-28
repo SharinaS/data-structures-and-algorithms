@@ -15,9 +15,15 @@ Read about the algorithms: [The Blog](https://github.com/SharinaS/data-structure
 * [Binary Search](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
 * [Linked List](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist) 
 * [Stacks and Queues](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
-* [Utilities - contains Animal Shelter, MultiBracket Validation, and FizzBuzzTree](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
 * [PseudoQueue](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
 * [Trees](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
+* [Hashtable](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/hashtable)
+
+# Miscellaneous
+* [Utilities](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
+  * Animal Shelter
+  * MultiBracket Validation
+  * FizzBuzzTree
 
 # Array Methods Include:
 * [reverseArray()](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java)
@@ -230,4 +236,16 @@ Return the tree with its new values.
 ### Whiteboarding image:
 ![image of whiteboard](code401Challenges/assets/fizzbuzz-tree.jpg)
 
+# Hashtables
+The package [hashtable](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/hashtable) includes a variety of methods. 
 
+The following four methods have a Time Complexity of O(1), and a Space Complexity of O(1):
+
+* add()
+  * Takes in both the key and value. This method hashes the key, and adds the key and value pair to the table, handling collisions as needed.
+* get()
+  * Takes in the key and returns the value from the table.
+* contains()
+  * Takes in the key and returns a boolean, indicating if the key exists in the table already.
+* hash()
+  * Takes in an arbitrary key and returns an index in the collection.
