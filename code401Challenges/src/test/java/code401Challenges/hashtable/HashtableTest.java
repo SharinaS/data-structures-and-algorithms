@@ -3,6 +3,7 @@ package code401Challenges.hashtable;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 
 import static org.junit.Assert.*;
@@ -11,26 +12,36 @@ import static org.junit.Assert.*;
 public class HashtableTest {
     Hashtable testHashtable;
     @Before
-    public void setUp() {
+
+    public void setUp() throws UnsupportedEncodingException {
         testHashtable = new Hashtable();
         testHashtable.add("key1", "value1");
         testHashtable.add("bananas", "kiwis");
     }
 
-
+    // Tests that the add method enters a key and value
     @Test
-    public void add() {
+    public void add() throws UnsupportedEncodingException {
         assertTrue("Expected true",
                 testHashtable.add("key3", "value 3")
         );
     }
 
+    // Tests that collision produces a false from add method
     @Test
-    public void get() {
-//        assertEquals("first key should have value of value1",
-//                "value1",
-//                testHashtable.get("key1")
-//        );
+    public void add2() throws UnsupportedEncodingException {
+        assertFalse("Expected false",
+                testHashtable.add("bananas", "kiwi")
+        );
+    }
+
+    // Test shows that when you input a key, it gets expected value back
+    @Test
+    public void get() throws UnsupportedEncodingException {
+        assertEquals("first key should have value of value1",
+                "value1",
+                testHashtable.get("key1")
+        );
     }
 
     // Check that contains method can check if a key exists already:
@@ -42,7 +53,7 @@ public class HashtableTest {
                 testEntry.key.contains(testStringKey));
     }
 
-    // Check that contains method returns false when key does not yet exist in the table
+    // Check that contains method returns false when key does not yet exist in the hashtable
     @Test
     public void contains2() {
         Entry testEntry = new Entry("apples", "granny smith");
@@ -53,19 +64,32 @@ public class HashtableTest {
 
     // Check that hash converts a string to a usable hash
     @Test
-    public void testHash() {
-        Hashtable testHashtable = new Hashtable();
-        String toHash = "Elephant";
-        assertEquals("Expected a number",
-                77,
-                testHashtable.hash(toHash)
-                );
+        public void testHash() throws UnsupportedEncodingException {
+            Hashtable testHashtable = new Hashtable();
+            String toHash = "Elephant";
+            assertEquals("Expected index of 83",
+                    83,
+                    testHashtable.hash(toHash)
+            );
     }
 
-    //Adding a key/value to your hashtable results in the value being in the data structure
-    //Retrieving based on a key returns the value stored
-    //Successfully returns null for a key that does not exist in the hashtable
-    //Successfully handle a collision within the hashtable
-    //Successfully retrieve a value from a bucket within the hashtable that has a collision
-    //Successfully hash a key to an in-range value
+    @Test
+    public void testHash2() throws UnsupportedEncodingException {
+        Hashtable testHashtable = new Hashtable();
+        String toHash = "cat";
+        assertEquals("Expected index of 88",
+                88,
+                testHashtable.hash(toHash)
+        );
+    }
+
+    @Test
+    public void testHash3() throws UnsupportedEncodingException {
+        Hashtable testHashtable = new Hashtable();
+        String toHash = "abracadabra";
+        assertEquals("Expected index of 92",
+                92,
+                testHashtable.hash(toHash)
+        );
+    }
 }
