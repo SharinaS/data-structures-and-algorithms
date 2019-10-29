@@ -4,16 +4,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
-import java.util.LinkedList;
 
 import static org.junit.Assert.*;
 
 
 public class HashtableTest {
     Hashtable testHashtable;
-    @Before
 
-    public void setUp() throws UnsupportedEncodingException {
+    @Before
+    public void setUp() {
         testHashtable = new Hashtable();
         testHashtable.add("key1", "value1");
         testHashtable.add("bananas", "kiwis");
@@ -21,7 +20,7 @@ public class HashtableTest {
 
     // Tests that the add method enters a key and value
     @Test
-    public void add() throws UnsupportedEncodingException {
+    public void add() {
         assertTrue("Expected true",
                 testHashtable.add("key3", "value 3")
         );
@@ -29,7 +28,7 @@ public class HashtableTest {
 
     // Tests that collision produces a false from add method
     @Test
-    public void add2() throws UnsupportedEncodingException {
+    public void add2() {
         assertFalse("Expected false",
                 testHashtable.add("bananas", "kiwi")
         );
@@ -37,7 +36,7 @@ public class HashtableTest {
 
     // Test shows that when you input a key, it gets expected value back
     @Test
-    public void get() throws UnsupportedEncodingException {
+    public void get() {
         assertEquals("first key should have value of value1",
                 "value1",
                 testHashtable.get("key1")
@@ -64,7 +63,7 @@ public class HashtableTest {
 
     // Check that hash converts a string to a usable hash
     @Test
-        public void testHash() throws UnsupportedEncodingException {
+        public void testHash() {
             Hashtable testHashtable = new Hashtable();
             String toHash = "Elephant";
             assertEquals("Expected index of 83",
@@ -74,7 +73,7 @@ public class HashtableTest {
     }
 
     @Test
-    public void testHash2() throws UnsupportedEncodingException {
+    public void testHash2() {
         Hashtable testHashtable = new Hashtable();
         String toHash = "cat";
         assertEquals("Expected index of 88",
@@ -84,7 +83,7 @@ public class HashtableTest {
     }
 
     @Test
-    public void testHash3() throws UnsupportedEncodingException {
+    public void testHash3() {
         Hashtable testHashtable = new Hashtable();
         String toHash = "abracadabra";
         assertEquals("Expected index of 92",
