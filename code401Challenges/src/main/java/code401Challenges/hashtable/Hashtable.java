@@ -18,7 +18,7 @@ public class Hashtable {
 
     // add: takes in both the key and value. This method should hash the key, and add the key and value pair
     // to the table, handling collisions as needed.
-    public boolean add (String key, String value) throws UnsupportedEncodingException {
+    public boolean add (String key, String value) {
         // takes a key and turns it into a hashed thing
         int arrIndex = hash(key);
         Entry entry = new Entry(key, value);
@@ -37,7 +37,7 @@ public class Hashtable {
 
 
     // get: takes in the key and returns the value from the table.
-    public String get (String key) throws UnsupportedEncodingException {
+    public String get (String key) {
         // String gets hashed to become hashed key, which is the index to find the linked list
         int arrIndex = hash(key);
 
@@ -54,8 +54,13 @@ public class Hashtable {
     }
 
     // contains: takes in the key and returns a boolean, indicating if the key exists in the table already.
-    public boolean contains (String key) throws UnsupportedEncodingException {
+    public boolean contains (String key) {
         int arrIndex = hash(key);
+
+        if (hashTableArray[arrIndex] == null) {
+            hashTableArray[arrIndex] = new LinkedList<>();
+        }
+
         for (int i = 0; i < hashTableArray[arrIndex].size(); i++) {
             if (hashTableArray[arrIndex].get(i).key.equals(key)){
                 return true; // returns true when a key already exists
@@ -66,7 +71,7 @@ public class Hashtable {
 
     // hash: takes in an arbitrary key and returns an index in the collection.
     // https://stackoverflow.com/questions/16458564/convert-character-to-ascii-numeric-value-in-java#targetText=Just%20cast%20your%20char%20as,%2F%2F%20ascii%20is%20now%2097.
-    public int hash (String key) throws UnsupportedEncodingException {
+    public int hash (String key) {
             int len = key.length();
             int addedAscii = 0;
             for (var i = 0; i < len; i ++) {

@@ -237,7 +237,7 @@ Return the tree with its new values.
 ![image of whiteboard](code401Challenges/assets/fizzbuzz-tree.jpg)
 
 # Hashtables
-The package [hashtable](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/hashtable) includes a variety of methods. 
+## The class [hashtable](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/hashtable) includes a variety of methods. 
 
 The following four methods have a Time Complexity of O(1), and a Space Complexity of O(1):
 
@@ -249,3 +249,10 @@ The following four methods have a Time Complexity of O(1), and a Space Complexit
   * Takes in the key and returns a boolean, indicating if the key exists in the table already.
 * hash()
   * Takes in an arbitrary key and returns an index in the collection.
+
+## Class Repeated Word
+This class checks a lengthy string to find the first word that is repeated. It then repeats that word.
+
+Finding the first word that is repeated is done with my own hashtable class, versus the built in class.
+
+![image of whiteboard](code401Challenges/assets/repeated-word.png)
