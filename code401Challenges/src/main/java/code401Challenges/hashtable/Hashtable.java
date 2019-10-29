@@ -1,6 +1,5 @@
 package code401Challenges.hashtable;
 
-import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 
 // NOTES:
@@ -34,7 +33,6 @@ public class Hashtable {
         }
         return true;
     }
-
 
     // get: takes in the key and returns the value from the table.
     public String get (String key) {
@@ -82,5 +80,4 @@ public class Hashtable {
             return addedAscii * 599 % hashTableArray.length;
 
     }
-
 }
