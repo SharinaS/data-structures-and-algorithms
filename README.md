@@ -256,3 +256,8 @@ This class checks a lengthy string to find the first word that is repeated. It t
 Finding the first word that is repeated is done with my own hashtable class, versus the built in class.
 
 ![image of whiteboard](code401Challenges/assets/repeated-word.png)
+
+## Class TreeIntersection
+TreeIntersection is a class that contains methods that find common values within two binary trees. Hashmap and Tree are two classes used to solve this coding challenge. 
+
+![image of whiteboard](code401Challenges/assets/tree-intersection.jpg)
