@@ -250,14 +250,31 @@ The following four methods have a Time Complexity of O(1), and a Space Complexit
 * hash()
   * Takes in an arbitrary key and returns an index in the collection.
 
-## Class Repeated Word
+## Repeated Word
 This class checks a lengthy string to find the first word that is repeated. It then repeats that word.
 
 Finding the first word that is repeated is done with my own hashtable class, versus the built in class.
 
 ![image of whiteboard](code401Challenges/assets/repeated-word.png)
 
-## Class TreeIntersection
+## TreeIntersection
 TreeIntersection is a class that contains methods that find common values within two binary trees. Hashmap and Tree are two classes used to solve this coding challenge. 
 
 ![image of whiteboard](code401Challenges/assets/tree-intersection.jpg)
+
+## LeftJoin
+The class LeftJoin includes a function that LEFT JOINs two hashmaps into a single data structure.
+The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+The code combines the key and corresponding values (if they exist) into a new data structure according to LEFT JOIN logic.
+* LEFT JOIN means all the values in the first hashmap are returned, and if values exist in the “right” hashmap, they are appended to the result row. If no values exist in the right hashmap, then some flavor of NULL should be appended to the result row.
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Data Structures used in this problem:
+* Hashmap
+* Array
+* ArrayList
+
+![image of whiteboard](code401Challenges/assets/left-join.jpg)
