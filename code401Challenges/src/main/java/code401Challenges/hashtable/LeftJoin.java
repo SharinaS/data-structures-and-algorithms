@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class LeftJoin {
 
-    public ArrayList<String[]> leftJoinTwoHashmaps(Hashtable hashtable1, Hashtable hashtable2) {
+    public static ArrayList<String[]> leftJoinTwoHashmaps(Hashtable hashtable1, Hashtable hashtable2) {
         ArrayList<String[]> answer = new ArrayList<>();
         //String[] theThree = new String[3];
         // for index in the hashtable's aray:
