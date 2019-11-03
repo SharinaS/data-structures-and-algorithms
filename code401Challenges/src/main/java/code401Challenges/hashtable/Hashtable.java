@@ -13,7 +13,7 @@ import java.util.LinkedList;
 // a key value pair where the key is already in the table. If the key is already there, thow exception or return false.
 
 public class Hashtable {
-    LinkedList<Entry>[] hashTableArray = new LinkedList[100]; // Array of linked lists
+    LinkedList<Entry>[] hashTableArray = new LinkedList[100]; // Array of linked lists make this public
 
     // add: takes in both the key and value. This method should hash the key, and add the key and value pair
     // to the table, handling collisions as needed.

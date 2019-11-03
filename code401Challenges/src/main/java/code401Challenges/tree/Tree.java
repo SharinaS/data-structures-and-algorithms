@@ -105,36 +105,35 @@ public class Tree<T> {
     // ======= Breadth First Traversal, using a queue, for numbers =======
     // Michelle solution: https://github.com/codefellows/seattle-java-401d6/blob/master/class-18/Tree.java
 
-    // TO DO: FIX ERROR IN THIS CODE
-//    public List<T> breadthFirstSearch() {
-//        return breadthFirstTraverse(this.root);
-//    }
-//
-//    public static <T> List<T> breadthFirstTraverse (Node<T> root) {
-//        Queue<Node<T>> storageQ = new LinkedList<>();
-//        List<T> result = new LinkedList<>();
-//
-//        // put the root into the queue to process first.
-//        if (root == null) {
-//            throw new NoSuchElementException();
-//        } else {
-//            storageQ.enqueue(root);
-//        }
-//
-//        // process rest of the nodes, while there are nodes left
-//        while (!storageQ.isEmpty()) {
-//            Node<T> currNode = storageQ.dequeue();
-//
-//            result.add(currNode.value);
-//
-//            if (currNode.left != null) {
-//                storageQ.enqueue(currNode.left);
-//            }
-//            if (root.right != null)
-//                storageQ.enqueue(currNode.right);
-//            }
-//        return result;
-//    }
+    public List<T> breadthFirstSearch() {
+        return breadthFirstTraverse(this.root);
+    }
+
+    public List<T> breadthFirstTraverse (Node<T> root) {
+        java.util.Queue<Node<T>> storageQ = new LinkedList<>();
+        List<T> result = new LinkedList<>();
+
+        // put the root into the queue to process first.
+        if (root == null) {
+            throw new NoSuchElementException();
+        } else {
+            storageQ.add(root);
+        }
+
+        // process rest of the nodes, while there are nodes left
+        while (!storageQ.isEmpty()) {
+            Node<T> currNode = storageQ.remove();
+
+            result.add(currNode.value);
+
+            if (currNode.left != null) {
+                storageQ.add(currNode.left);
+            }
+            if (root.right != null)
+                storageQ.add(currNode.right);
+            }
+        return result;
+    }
 /////////////////
 
 //    // ======= Find Max Value in a Binary Tree =======
