@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
 
 public class Tree<T> {
 
-    public Node <T> root;
+    public Node<T> root;
 
     public Tree() {  // <----------- why two constructors?
         root = null;
