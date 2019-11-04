@@ -1,7 +1,6 @@
 package code401Challenges.graph;
 
 import java.util.HashSet;
-import java.util.List;
 
 public class Graph<T> {
     HashSet<Node<T>> nodesInSet;
@@ -21,14 +20,22 @@ public class Graph<T> {
     }
 
     // getNodes() returns all of the nodes in the graph as a collection (set, list, or similar)
-    public HashSet<Node<T>> getNodesInSet() {
+    public HashSet<Node<T>> getNodes() {
         return nodesInSet;
     }
 
     // getNeighbors() returns a collection of nodes connected to the given node, Takes in a given node,
     // Include the weight of the connection in the returned collection
-    public List<Edge<T>> getNeighbors (Node<T> node) {
-        return node.neighbors; // returns a list of edges
+    public HashSet<Node<T>> getNeighbors (Node<T> node) {
+        // iterate through and return a unque list of nodes
+        HashSet<Node<T>> neighbors = new HashSet<Node<T>>();
+        // iterate over neighbors
+        for(Edge<T> potentialNeighbor : node.edges) {
+            if(!neighbors.contains(potentialNeighbor.nodeEdgeIsPointingTo.value)) {
+                neighbors.add(potentialNeighbor.nodeEdgeIsPointingTo);
+            }
+        }
+        return neighbors;
     }
 
     // addEdge() Adds a new edge between two nodes in the graph, Includes the ability to have a “weight”,
