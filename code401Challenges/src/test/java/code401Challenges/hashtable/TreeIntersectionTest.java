@@ -102,13 +102,14 @@ public class TreeIntersectionTest {
         expected.add(5);
         expected.add(12);
         expected.add(17);
+        expected.toArray();
 
         System.out.println(TreeIntersection.treeIntersection(root1, root2));
 
 
 //        assertArrayEquals("2 and 5 are in both trees",
-////                expected.toArray(),
-////                TreeIntersection.treeIntersection(root1, root2));
-////        );
+//                expected,
+//                TreeIntersection.treeIntersection(root1, root2));
+
     }
 }
