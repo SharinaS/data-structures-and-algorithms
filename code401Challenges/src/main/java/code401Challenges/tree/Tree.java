@@ -105,12 +105,13 @@ public class Tree<T> {
     // ======= Breadth First Traversal, using a queue, for numbers =======
     // Michelle solution: https://github.com/codefellows/seattle-java-401d6/blob/master/class-18/Tree.java
 
+
     public List<T> breadthFirstSearch() {
         return breadthFirstTraverse(this.root);
     }
 
     public List<T> breadthFirstTraverse (Node<T> root) {
-        java.util.Queue<Node<T>> storageQ = new LinkedList<>();
+        java.util.Queue<Node<T>> storageQ = new LinkedList<Node<T>>();
         List<T> result = new LinkedList<>();
 
         // put the root into the queue to process first.
@@ -124,7 +125,7 @@ public class Tree<T> {
         while (!storageQ.isEmpty()) {
             Node<T> currNode = storageQ.remove();
 
-            result.add(currNode.value);
+            result.add((T) currNode.value);
 
             if (currNode.left != null) {
                 storageQ.add(currNode.left);
