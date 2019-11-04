@@ -110,8 +110,7 @@ public class LeftJoinTest {
         }
 
 //        assertArrayEquals("expected something cool",
-//                expected,
+//                expected.toArray(),
 //                LeftJoin.leftJoinTwoHashmaps(hashtable1, hashtable2));
     }
-
 }
