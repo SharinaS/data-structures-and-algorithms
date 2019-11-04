@@ -18,6 +18,7 @@ Read about the algorithms: [The Blog](https://github.com/SharinaS/data-structure
 * [PseudoQueue](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues)
 * [Trees](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
 * [Hashtable](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/hashtable)
+* [Graphs](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/graph)
 
 # Miscellaneous
 * [Utilities](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
@@ -278,3 +279,12 @@ Data Structures used in this problem:
 * ArrayList
 
 ![image of whiteboard](code401Challenges/assets/left-join.jpg)
+
+# Graphs
+The class Graph works with the class Node and the class Edge. Graph has the following methods:
+
+* addNode()
+* getNodes()
+* getNeighbors()
+* addEdge()
+* getSize()
