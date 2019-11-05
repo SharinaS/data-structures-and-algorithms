@@ -288,3 +288,13 @@ The class Graph works with the class Node and the class Edge. Graph has the foll
 * getNeighbors()
 * addEdge()
 * getSize()
+* breadthFirstTraverse()
+
+### breadthFirstTraverse()
+This method takes in a starting node of a graph and traverses through the graph. It returns a set.
+
+Data structures used in the traversal:
+* Queue
+* HashSet
+
+![image of whiteboard](code401Challenges/assets/breadth-first-traverse.jpg)

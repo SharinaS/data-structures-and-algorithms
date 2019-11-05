@@ -7,7 +7,6 @@ public class Node<T> {
     T value;
     List<Edge<T>> edges;
 
-    // allows for
     public Node (T value) {
         this.value = value;
         this.edges = new LinkedList<>();
