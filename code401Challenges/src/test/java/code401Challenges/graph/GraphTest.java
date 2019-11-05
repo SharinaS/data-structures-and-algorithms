@@ -89,8 +89,61 @@ public class GraphTest {
                 3,
                 testGraph.getSize());
     }
-}
 
-// if graph is empty throw an exeption
-// if an edge is existed but there is is no node, that is an exception
-// getNodes() can retrn an empty set, and getNeighbors can return an empty deal.
+    // ======== BreadthFirstTraversal Method Tests =========
+    @Test
+    public void testBreadthFirstTraverse1() {
+        Graph<Integer> testGraph = new Graph<>();
+
+        Node<Integer> testNode1 = testGraph.addNode(12);
+        Node<Integer> testNode2 = testGraph.addNode(4);
+        Node<Integer> testNode3 = testGraph.addNode(49);
+
+        // adds edge with weight:
+        testGraph.addEdge(testNode1, testNode2, 200);
+        testGraph.addEdge(testNode3, testNode1, 300);
+
+        //System.out.println(testGraph.breadthFirstTraverse(testNode1));
+        HashSet<Node<Integer>> testAnswerSet = testGraph.breadthFirstTraverse(testNode1);
+
+        assertEquals("There should be three things in the graph",
+                3,
+                testAnswerSet.size());
+    }
+
+    @Test
+    public void testBreadthFirstTraverse2() {
+        Graph<Integer> testGraph = new Graph<>();
+
+        Node<Integer> testNode1 = testGraph.addNode(12);
+        Node<Integer> testNode2 = testGraph.addNode(4);
+
+        // adds edge with weight:
+        testGraph.addEdge(testNode1, testNode2, 200);
+
+        HashSet<Node<Integer>> testAnswerSet = testGraph.breadthFirstTraverse(testNode1);
+
+        assertEquals("There should be two things in the set",
+                2,
+                testAnswerSet.size());
+    }
+
+    @Test
+    public void testBreadthFirstTraverse3() {
+        Graph<Integer> testGraph = new Graph<>();
+
+        Node<Integer> testNode1 = testGraph.addNode(12);
+        Node<Integer> testNode2 = testGraph.addNode(4);
+        Node<Integer> testNode3 = testGraph.addNode(12);
+
+        // adds edge with weight:
+        testGraph.addEdge(testNode1, testNode2, 200);
+        testGraph.addEdge(testNode3, testNode1, 300);
+
+        HashSet<Node<Integer>> testAnswerSet = testGraph.breadthFirstTraverse(testNode1);
+
+        assertEquals("testNode1 should be in the collection from the breadth-first-traverse",
+                true,
+                testAnswerSet.contains(testNode1));
+    }
+}

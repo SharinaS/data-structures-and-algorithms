@@ -1,6 +1,9 @@
 package code401Challenges.graph;
 
+import code401Challenges.stacksandqueues.Queue;
+
 import java.util.HashSet;
+import java.util.LinkedList;
 
 public class Graph<T> {
     HashSet<Node<T>> nodesInSet;
@@ -28,7 +31,7 @@ public class Graph<T> {
     // Include the weight of the connection in the returned collection
     public HashSet<Node<T>> getNeighbors (Node<T> node) {
         // iterate through and return a unque list of nodes
-        HashSet<Node<T>> neighbors = new HashSet<Node<T>>();
+        HashSet<Node<T>> neighbors = new HashSet<>();
         // iterate over neighbors
         for(Edge<T> potentialNeighbor : node.edges) {
             if(!neighbors.contains(potentialNeighbor.nodeEdgeIsPointingTo.value)) {
@@ -47,9 +50,30 @@ public class Graph<T> {
         }
     }
 
-
     // getSize() Returns the total number of nodes in the graph
     public int getSize() {
         return nodesInSet.size();
+    }
+
+
+    // breadthFirstTraverse through graph
+    public HashSet<Node<T>> breadthFirstTraverse(Node<T> node) {
+        LinkedList<Node<T>> nodesToProcess = new LinkedList<>(); // will use as a queue
+        HashSet<Node<T>> seen = new HashSet<>();
+
+        nodesToProcess.add(node);
+
+        while(!nodesToProcess.isEmpty()) {
+            Node current = nodesToProcess.removeFirst();
+            seen.add(current);
+
+            HashSet neighbors = getNeighbors(current);
+            for( Object neighbor : neighbors) {  // <---------- why is it requiring an object, versus a Node?
+                if (!seen.contains(neighbor)) {
+                    nodesToProcess.add((Node<T>) neighbor);
+                }
+            }
+        }
+        return seen;
     }
 }
