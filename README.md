@@ -281,7 +281,7 @@ Data Structures used in this problem:
 ![image of whiteboard](code401Challenges/assets/left-join.jpg)
 
 # Graphs
-The class Graph works with the class Node and the class Edge. Graph has the following methods:
+The class [Graph](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/graph) works with the class Node and the class Edge. Graph has the following methods:
 
 * addNode()
 * getNodes()
@@ -297,4 +297,11 @@ Data structures used in the traversal:
 * Queue
 * HashSet
 
-![image of whiteboard](code401Challenges/assets/breadth-first-traverse.jpg)
+![image of whiteboard](code401Challenges/assets/graph-breadth-first.jpg)
+
+## Class GetEdge
+Code Challenge: Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be? 
+
+This [code challenge](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/graph) uses the getNeighbors() method in the Graph class, and the fact that the Node class has information about the edges each Node has. The algorithm not only determines the neighbors for a given node, given the getNeighbors() method, but also the weight of the edge between the given node and the next node in the given array to determine the ticket cost. 
+
+![image of whiteboard](code401Challenges/assets/trip-itinerary.jpg)
