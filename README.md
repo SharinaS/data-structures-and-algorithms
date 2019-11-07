@@ -305,3 +305,8 @@ Code Challenge: Given a business trip itinerary, and an Alaska Airlines route ma
 This [code challenge](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/graph) uses the getNeighbors() method in the Graph class, and the fact that the Node class has information about the edges each Node has. The algorithm not only determines the neighbors for a given node, given the getNeighbors() method, but also the weight of the edge between the given node and the next node in the given array to determine the ticket cost. 
 
 ![image of whiteboard](code401Challenges/assets/trip-itinerary.jpg)
+
+## Class DepthFirst
+DepthFirst contains a function called depthFirst that accepts an adjacency list as a graph. It calls a helper function that recursively conducts a depth first traversal and returns a collection of nodes in their pre-order depth-first traversal order.
+
+![image of whiteboard](code401Challenges/assets/depth-first-pre-order.jpg)
