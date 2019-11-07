@@ -198,5 +198,8 @@ public class LinkedList {
         return a;
     }
 
+    // Reverse a linked list
+    // https://www.geeksforgeeks.org/reverse-a-linked-list/
+
 }
 
