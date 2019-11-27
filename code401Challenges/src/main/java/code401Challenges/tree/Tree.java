@@ -1,7 +1,5 @@
 package code401Challenges.tree;
 
-import code401Challenges.stacksandqueues.Queue;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,13 +9,14 @@ public class Tree<T> {
 
     public Node<T> root;
 
-    public Tree() {  // <----------- why two constructors?
+    public Tree() {
         root = null;
     }
 
     public Tree(Node<T> root) {
         this.root = root;
     }
+
 
     // ====== PreOrder Traversal
     public ArrayList<T> preOrderTraversal() {
@@ -107,11 +106,12 @@ public class Tree<T> {
 
 
     public List<T> breadthFirstSearch() {
+
         return breadthFirstTraverse(this.root);
     }
 
     public List<T> breadthFirstTraverse (Node<T> root) {
-        java.util.Queue<Node<T>> storageQ = new LinkedList<Node<T>>();
+        java.util.Queue<Node<T>> storageQ = new LinkedList<>();
         List<T> result = new LinkedList<>();
 
         // put the root into the queue to process first.
@@ -137,7 +137,7 @@ public class Tree<T> {
     }
 /////////////////
 
-//    // ======= Find Max Value in a Binary Tree =======
+    //    // ======= Find Max Value in a Binary Tree =======
     public int findMaxValue() {
         if (this.root.value instanceof Integer){
             return preOrderMaxFinder((Node<Integer>) this.root, Integer.MIN_VALUE);
