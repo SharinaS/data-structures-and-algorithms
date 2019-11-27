@@ -1,3 +1,5 @@
+package code401Challenges;
+
 import java.util.Arrays;
 
 public class ArrayReverse {
