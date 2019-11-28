@@ -5,64 +5,24 @@ Includes Code challenges from Two Code Fellows courses - Code301-d50 course and 
 Sharina Stubbs
 
 # Contents
-[Sorting Algorithms](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/sort/README_SORTING.MD)
+[Arrays](/Users/sharina/codefellows/401Java/data-structures-and-algorithms/code401Challenges/src/main/java/code401Challenges/ARRAYS.MD)
 
-[Arrays](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ARRAYS.MD)
-
-[Linked Lists](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist) 
-
-[Stacks and Queues](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues/README_STACKSQUEUES.MD)
-
-[Trees and Graphs](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/tree/README_TREE.MD)
+[Graphs](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/graph)
 
 [Hashtables](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/hashtable)
+
+[Linked Lists](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist)
+
+[Sorting Algorithms](/Users/sharina/codefellows/401Java/data-structures-and-algorithms/code401Challenges/src/main/java/code401Challenges/sort/README_SORTING.MD)
+
+[Stacks and Queues](/Users/sharina/codefellows/401Java/data-structures-and-algorithms/code401Challenges/src/main/java/code401Challenges/stacksandqueues/README_STACKSQUEUES.MD)
+
+[Strings](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/string)
+
+[Trees](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
  
-# Linked List Methods
-See the code [here](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist).
-* insertAtHead()
-* toString()
-* includes()
-* insertAtEnd()
-* insertBefore()
-* insertAfter()
-* runningBackwards()
-* mergeLists()
 
-## Linked List
-Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node. Within the LinkedList class, there is a head property. Upon instantiation, an empty Linked List should be created.
-
-## Linked List Methods
-### InsertAtHead()
-Adds a value to the linked list at the beginning of the list. More specifically, it takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
-
-### toString()
-Takes the linked list values and outputs them as a string. toString() takes in no arguments and returns a string representing all the values in the Linked List.
-
-### includes()
-Checks the values of the linked list for a particular value. Specifically, it takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
-
-### append()
-adds a new node with the given value to the end of the list
-
-### insertBefore()
- add a new node with the given newValue immediately before the first value node
-
-### insertAfter()
- add a new node with the given newValue immediately after the first value node
-
-### Whiteboarding of append(), insertBefore() and insertAfter()
-![screenshot of page](code401Challenges/assets/linked-list.jpg)
-
-### runningBackwards()
-A method for the Linked List class which takes a number, k, as a parameter. The output is the node’s value that is k from the end of the linked list. 
-
-![screenshot of page](code401Challenges/assets/kth-from-end1.jpg)
-![screenshot of page](code401Challenges/assets/kth-from-end2.jpg)
-
-### MergeLists()
-In place merge of two linked lists that uses a while loop to iterate through the lists. Pointers and temp variable(s) are used to point from node to node, to essentially combine the two lists. This was a pair-programming whiteboarding with Sarah Fisher.
-
-![screenshot of page](code401Challenges/assets/merge-list.jpg)
+ 
 
 # Hashtables
 ## The class [hashtable](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/hashtable) includes a variety of methods. 
