@@ -3,10 +3,7 @@ My [Node class](https://github.com/SharinaS/data-structures-and-algorithms/blob/
 
 # Linked List Class 
 ### About
-Within the LinkedList class, there is a head property. Upon instantiation, an empty Linked List should be created.
-
-### The Code
-Check out my [Linked List class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/linkedlist/LinkedList.java) to see the following methods in Java.
+Within the [LinkedList class](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/linkedlist/LinkedList.java), there is a head property. Upon instantiation, an empty Linked List should be created.
 
 ## Methods within the Linked List Class
 
