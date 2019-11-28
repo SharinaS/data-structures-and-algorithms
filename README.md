@@ -7,7 +7,7 @@ Sharina Stubbs
 # Contents
 [Arrays](/Users/sharina/codefellows/401Java/data-structures-and-algorithms/code401Challenges/src/main/java/code401Challenges/ARRAYS.MD)
 
-[Graphs](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/graph)
+[Graphs](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/graph/README_GRAPH.MD)
 
 [Hashtables](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/hashtable)
 
@@ -17,9 +17,9 @@ Sharina Stubbs
 
 [Stacks and Queues](/Users/sharina/codefellows/401Java/data-structures-and-algorithms/code401Challenges/src/main/java/code401Challenges/stacksandqueues/README_STACKSQUEUES.MD)
 
-[Strings](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/string)
+[Strings](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/string/README_STRINGS.MD)
 
-[Trees](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/tree)
+[Trees](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/tree/README_TREE.MD)
  
 
  
