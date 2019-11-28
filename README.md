@@ -11,7 +11,7 @@ Sharina Stubbs
 
 [Hashtables](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/hashtable)
 
-[Linked Lists](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/linkedlist)
+[Linked Lists](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/linkedlist/README_LINKEDLIST.MD)
 
 [Sorting Algorithms](/Users/sharina/codefellows/401Java/data-structures-and-algorithms/code401Challenges/src/main/java/code401Challenges/sort/README_SORTING.MD)
 
@@ -39,9 +39,9 @@ The following four methods have a Time Complexity of O(1), and a Space Complexit
   * Takes in an arbitrary key and returns an index in the collection.
 
 ## Repeated Word
-The class [RepeatedWord](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/hashtable/RepeatedWord.java) checks a lengthy string to find the first word that is repeated. It then repeats that word.
+The class [RepeatedWord](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/hashtable/RepeatedWord.java) checks a lengthy string to find the first word that is repeated. It then repeats that word. 
 
-Finding the first word that is repeated is done with my own hashtable class, versus the built in class.
+Finding the first word that is repeated is done with my own hashtable class, versus the built in Java class.
 
 ![image of whiteboard](code401Challenges/assets/repeated-word.png)
 
@@ -67,33 +67,3 @@ Data Structures used in this problem:
 
 ![image of whiteboard](code401Challenges/assets/left-join.jpg)
 
-# Graphs
-The class [Graph](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/graph) works with the class Node and the class Edge. Graph has the following methods:
-
-* addNode()
-* getNodes()
-* getNeighbors()
-* addEdge()
-* getSize()
-* breadthFirstTraverse()
-
-### breadthFirstTraverse()
-This method takes in a starting node of a graph and traverses through the graph. It returns a set.
-
-Data structures used in the traversal:
-* Queue
-* HashSet
-
-![image of whiteboard](code401Challenges/assets/graph-breadth-first.jpg)
-
-## Class GetEdge
-Code Challenge: Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be? 
-
-This [code challenge](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/graph) uses the getNeighbors() method in the Graph class, and the fact that the Node class has information about the edges each Node has. The algorithm not only determines the neighbors for a given node, given the getNeighbors() method, but also the weight of the edge between the given node and the next node in the given array to determine the ticket cost. 
-
-![image of whiteboard](code401Challenges/assets/trip-itinerary.jpg)
-
-## Class DepthFirst
-DepthFirst contains a function called depthFirst that accepts an adjacency list as a graph. It calls a helper function that recursively conducts a depth first traversal and returns a collection of nodes in their pre-order depth-first traversal order.
-
-![image of whiteboard](code401Challenges/assets/depth-first-pre-order.jpg)

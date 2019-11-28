@@ -193,13 +193,19 @@ public class StringStuff {
             System.out.println("they don't match");
         }
 
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%");
 
-        // COUNT UP NODES IN A LINKED LIST.
-
+        String echo = "echo";
+        String answerEcho = "";
+        int n = 0;
+        for(int i = 0; i < n; i++) {
+            answerEcho += echo;
+        }
+        System.out.println(answerEcho);
     }
 }
 
-//////////////////////////////////////////////////////////////
+//////////////////////////// FIRST ROUND OF WHITEBOARDING INTERVIEWS //////////////////////////////////
     // Regarding trees, if a tree is the input, that is the wrapper class for the Node.
     // Can ask, I'd like to pass in a Node root, given I know there is a tree wrapper class given.
 
