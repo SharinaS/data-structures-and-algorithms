@@ -13,6 +13,7 @@ public class StringStuff {
         String str1 = "look at the cat!";
         String str2 = str1.replaceAll(" ", "");
         String str3 = str2.replace("!", "");
+
         for (char c : str3.toCharArray()) {
             System.out.println(c);
         }
@@ -202,6 +203,31 @@ public class StringStuff {
             answerEcho += echo;
         }
         System.out.println(answerEcho);
+
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+        String countCode = "aaacodebbb";
+        for(int i = 0; i < str.length(); i++) {
+            if(countCode.charAt(4) == 'a'){
+                System.out.println("a is found at index 0");
+                break;
+            } else {
+                System.out.println("got to the else");
+                break;
+            }
+        }
+
+
+        int countCodeCounter = 0;
+        for(int i = 0; i < countCode.length()-1 ; i++) {
+            if (countCode.charAt(i) == 'c' && countCode.charAt(i+1) == 'o' && countCode.charAt(i+3) == 'e') {
+                countCodeCounter +=1;
+            }
+        }
+        System.out.println("c occurrences: " + countCodeCounter);
+
+
+
     }
 }
 
