@@ -228,6 +228,19 @@ public class StringStuff {
 
 
 
+        System.out.println("**************************");
+
+        int evenCounter = 0;
+        int[] arrayEvens = {1, 2, 3, 4};
+        for(int i = 0; i < arrayEvens.length; i++) {
+            if(i == 0) {
+                evenCounter++;
+            }
+            if(i % 2 == 0 ) {
+                evenCounter++;
+            }
+        }
+        System.out.println(evenCounter);
     }
 }
 
