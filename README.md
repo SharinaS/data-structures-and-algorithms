@@ -1,11 +1,14 @@
 # About 
-Includes Code challenges from Two Code Fellows courses - Code301-d50 course and from Code401-Java-d6. All descriptions of code challenges that follow are from Code401 Java.
+Includes Code challenges from Two Code Fellows courses - Code301-d50 course and from Code401-Javad6. 
+
 
 # Contributor
 Sharina Stubbs
 
-# Contents
-[Arrays](/Users/sharina/codefellows/401Java/data-structures-and-algorithms/code401Challenges/src/main/java/code401Challenges/ARRAYS.MD)
+# Code Challenges 
+Code is written in Java.
+
+[Arrays](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ARRAYS.MD)
 
 [Graphs](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/graph/README_GRAPH.MD)
 
