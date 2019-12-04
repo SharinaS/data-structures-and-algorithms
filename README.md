@@ -5,8 +5,7 @@ Includes Code challenges from Two Code Fellows courses - Code301-d50 course and 
 # Contributor
 Sharina Stubbs
 
-# Code Challenges 
-Code is written in Java.
+# Code Challenges with Solutions in Java
 
 [Arrays](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ARRAYS.MD)
 
@@ -24,4 +23,5 @@ Code is written in Java.
 
 [Trees](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/tree/README_TREE.MD)
 
-
+# Code Challenges with Solutions in JavaScript
+[Challenges and my solutions](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code-challenges), ranging from chaining, to regex, to sorting, to the use of map and other JS methods. Challenges solved during my time in the intermediate level course at Code Fellows, Code301.
