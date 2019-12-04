@@ -1,18 +1,14 @@
 # Code Challenges 
-My collection of solutions to code challenges that involve arrays. Coding is done is Java.
+My collection of solutions in Java to code challenges that involve arrays.
 
 ## Contributor
 Sharina Stubbs
 
-My answers to code challenges involving arrays:
-* [reverseArray()](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java)
-* [arrayShift()](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayShift.java)
-* [binarySearch()](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java)
- * [MultiBracket Validation](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities)
-
 # Reverse Array
 ## Problem Domain 
-Write a function called reverseArray() that takes an array as an argument and returns an array with elements in reversed order. Avoids any built-in language specific methods. See the code [in my GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java).
+Write a function called reverseArray() that takes an array as an argument and returns an array with elements in reversed order. Avoids any built-in language specific methods. 
+
+See the [code](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java) in my GitHub repo].
 
 ## Approach & Efficiency
 I decided to approach this problem with creating a new array, instead of the other option I had considered, which was to change the array in place. I chose the new array approach since it made the most sense to me initially, however creating a new array would sacrifice memory. 
@@ -24,7 +20,7 @@ Big 0 space - 0(n)
 ![screenshot of page](/code401Challenges/assets/array-reverse.jpg)
 
 # Array Shift
-Whiteboarding done with Ahren Swett. Actual code written solo by Sharina Stubbs. My code can be found in my [GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayShift.java)
+Whiteboarding done with Ahren Swett. Actual code written solo by Sharina Stubbs. My code can be found in my [GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayShift.java), along with associated [tests](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/ArrayShiftTest.java).
 
 ## Challenge
 Write a function called ArrayShift that takes an array and a number. Output is a new array that includes that number added to the middle of the original array. Avoids any built-in language specific methods.
@@ -39,7 +35,7 @@ Big 0 space - 0(n)
 
 
 # Binary Search
-Whiteboarding done with Jon Veach. Code written by Sharina Stubbs. Find the code in [my GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java).
+Whiteboarding done with Jon Veach. Code written by Sharina Stubbs. Find the code in [my GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java) and the tests I wrote [here](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/BinarySearchTest.java).
 
 ## Challenge
 Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
@@ -82,6 +78,20 @@ I created an algorithm for this code challenge during my whiteboarding that I de
 ## Problem Domain
 Count up the number of even numbers that exist in an array.
 
-No code is yet available for this problem, beyond that which is shown in the image of the whiteboard.
+### The Code
+No code is yet available for this problem, beyond that shown in the image of the whiteboard.
 
+### Whiteboarding
 ![whiteboarding](/code401Challenges/assets/count-evens.jpg)
+
+# Count Numbers Except Those Between 6 and 7
+## Problem Domain
+Return the sum of the numbers in an array, except ignore sections of numbers starting with a six and extending to the next 7 (every six will be followed by at least one seven). Return 0 for no numbers.
+
+### The Code
+No code is yet available for this problem, beyond that  shown in the image of the whiteboard.
+
+### Whiteboarding
+![whiteboarding](/code401Challenges/assets/count-except-67a.jpg)
+
+![whiteboarding](/code401Challenges/assets/count-except-67b.jpg)
