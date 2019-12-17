@@ -3,6 +3,17 @@ The following are code challenges supplied by either CodingBat or Leetcode.
 
 If there is no link to the code, the code has not yet been written up in an IDE, and only exists in the image I have attached for that particular code challenge. 
 
+## How to Run the Code in StringStuff.java
+In the terminal: Go to the directory containing StringStuff.java, called `string`. To compile the code, type the following:
+```
+javac StringStuff.java
+```
+To run the code, then type in:
+```
+java StringStuff.java
+```
+The terminal will produce the output of the code written in the file.
+
 # String Echoes
 ## Problem Domain
 Given a string and a non-negative integer, return a larger string that is n copies of the original string. If n=0, return empty string.
