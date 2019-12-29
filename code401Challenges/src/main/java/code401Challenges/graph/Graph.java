@@ -65,8 +65,9 @@ public class Graph<T> {
     }
 
 
-    // ======= Breadth FirstTraverse through Graph
+    // ======= Breadth First Traverse through Graph ======
     // Explore neighbors before children in a BFS.
+    // BFT explores level-by-level
     // Basic algorithm: Pop the first node from the queue. Check if the node has been visited already.
     // Add the node's children to the end of the queue. Repeat while
     // the queue still contains one or more nodes.
