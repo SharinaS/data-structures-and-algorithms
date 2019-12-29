@@ -130,7 +130,7 @@ public class GraphTest {
 //    }
 
     @Test
-    public void testBreadthFirstTraverse() {
+    public void testBreadthFirstTraverse1() {
         Graph<Integer> testGraph = new Graph<>();
 
         // add nodes to testGraph
@@ -153,6 +153,60 @@ public class GraphTest {
         List<Integer> testAnswerSet = testGraph.breadthFirstTraverse(testNode1);
 
         assertEquals("Should return breadth first search of graph",
+                expected,
+                testAnswerSet
+        );
+    }
+
+    @Test
+    public void testBreadthFirstTraverse2() {
+        Graph<Integer> testGraph = new Graph<>();
+
+        // == add nodes to testGraph
+        // level 0
+        Node<Integer> testNode1 = testGraph.addNodeToSetOfGraphNodes(1);
+
+        // level 1
+        Node<Integer> testNode2 = testGraph.addNodeToSetOfGraphNodes(2);
+        Node<Integer> testNode3 = testGraph.addNodeToSetOfGraphNodes(3);
+        Node<Integer> testNode4 = testGraph.addNodeToSetOfGraphNodes(4);
+        Node<Integer> testNode5 = testGraph.addNodeToSetOfGraphNodes(5);
+
+        // level 2
+        Node<Integer> testNode6 = testGraph.addNodeToSetOfGraphNodes(6);
+        Node<Integer> testNode7 = testGraph.addNodeToSetOfGraphNodes(7);
+        Node<Integer> testNode8 = testGraph.addNodeToSetOfGraphNodes(8);
+
+        // == adds edge with weight between nodes in testGraph
+        testGraph.addEdge(testNode1, testNode2, 1);
+        testGraph.addEdge(testNode1, testNode3, 1);
+        testGraph.addEdge(testNode1, testNode4, 1);
+        testGraph.addEdge(testNode1, testNode5, 1);
+        testGraph.addEdge(testNode2, testNode3, 1);
+        testGraph.addEdge(testNode2, testNode8, 1);
+        testGraph.addEdge(testNode3, testNode4, 1);
+        testGraph.addEdge(testNode4, testNode5, 1);
+        testGraph.addEdge(testNode4, testNode7, 1);
+        testGraph.addEdge(testNode5, testNode6, 1);
+        testGraph.addEdge(testNode6, testNode7, 1);
+        testGraph.addEdge(testNode6, testNode8, 1);
+
+        // == list of values that should return from a BFT of the testGraph
+        List<Integer> expected = new LinkedList<>();
+        expected.add(1);
+        expected.add(2);
+        expected.add(4);
+        expected.add(3);
+        expected.add(5);
+        expected.add(8);
+        expected.add(7);
+        expected.add(6);
+
+        // == actual list of node values that returns from a BFT of testGraph
+        List<Integer> testAnswerSet = testGraph.breadthFirstTraverse(testNode1);
+
+        assertEquals("Should return breadth first search of graph, where level 1 values " +
+                        "are processed before level 2",
                 expected,
                 testAnswerSet
         );
