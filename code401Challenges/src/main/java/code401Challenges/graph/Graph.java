@@ -43,7 +43,6 @@ public class Graph<T> {
         return nodesInGraph;
     }
 
-
     // Returns a collection of nodes connected to the given node
     // Includes the weight of the connection in the returned collection
     // Uses the Node class's set of neighboring edges with their nodes.
@@ -72,11 +71,48 @@ public class Graph<T> {
     // Add the node's children to the end of the queue. Repeat while
     // the queue still contains one or more nodes.
 
+    // The following method is more my ideal set-up, with a list, however testing is difficult when a list of values
+    // is outputted, given BFT will variably order the neighbors to be processed, may lead to a different output
+    // order within each level each time.
 //    public HashSet<Node<T>> breadthFirstTraverse(Node<T> startingNode) {
-    public List<T> breadthFirstTraverse(Node<T> startingNode) {
+//    public List<T> breadthFirstTraverse(Node<T> startingNode) {
+//        LinkedList<Node<T>> queueOfNodesToProcess = new LinkedList<>();
+//        HashSet<Node<T>> seen = new HashSet<>();
+//        List<T> answerList = new LinkedList<>();
+//
+//        // add starting node to the queue
+//        queueOfNodesToProcess.add(startingNode);
+//
+//        // iterate only while the queue is not empty
+//        while(!queueOfNodesToProcess.isEmpty()) {
+//            Node<T> currentNode = queueOfNodesToProcess.removeFirst();
+//
+//            // process if not seen (this is an essential if-statement when method serves to add node value to a list)
+//            if(!seen.contains(currentNode)) {
+//                seen.add(currentNode);
+//                answerList.add(currentNode.getValue());
+//            }
+//
+//            // get the current node's neighboring nodes
+//            HashSet<Node<T>> setOfNeighborNodes = getNeighborNodes(currentNode);
+//
+//            // check the set of neighboring nodes and add any thus far unseen neighbors to the queue to process
+//            for (Node<T> neighbor : setOfNeighborNodes) {
+//                if (!seen.contains(neighbor)) {
+//                    queueOfNodesToProcess.add(neighbor);
+//                }
+//            }
+//        }
+//        return answerList;
+//    }
+
+    // == The following method is purely for testing, since the above method with an output of a list made for
+    // variable order of nodes added to the collection, given a breadth first search can change it's order of nodes
+    // outputted in the level it's working on.
+    public HashSet<T> breadthFirstTraverse(Node<T> startingNode) {
         LinkedList<Node<T>> queueOfNodesToProcess = new LinkedList<>();
         HashSet<Node<T>> seen = new HashSet<>();
-        List<T> answerList = new LinkedList<>();
+        HashSet<T> answerList = new HashSet<>();
 
         // add starting node to the queue
         queueOfNodesToProcess.add(startingNode);
