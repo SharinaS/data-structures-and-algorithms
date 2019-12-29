@@ -1,79 +1,105 @@
 package code401Challenges.graph;
 
-import code401Challenges.stacksandqueues.Queue;
 
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Graph<T> {
-    HashSet<Node<T>> nodesInSet;
+    // == Instance Variable ==
+    HashSet<Node<T>> nodesInGraph;
 
-    // constructor
+    // == Constructor ==
     public Graph () {
-        this.nodesInSet = new HashSet<>() {
+        this.nodesInGraph = new HashSet<>() {
         };
     }
 
-
-    // addNode() Adds a new node to the graph, Takes in the value of that node, Returns the added node
-    public Node<T> addNode(T value) {
-        Node<T> node = new Node<>(value); // constructs the node and tells it to take in the value
-        nodesInSet.add(node);
-        return node;
+    // == Methods ==
+    // Adds a new node to the graph
+    // Takes in the value of a node
+    // Returns the added node
+    public Node<T> addNodeToSetOfGraphNodes(T value) {
+        // construct a new node and tell it to take in the value inputted.
+        Node<T> newNode = new Node<>(value);
+        this.nodesInGraph.add(newNode);
+        return newNode;
     }
 
-    // getNodes() returns all of the nodes in the graph as a collection (set, list, or similar)
-    public HashSet<Node<T>> getNodes() {
-        return nodesInSet;
-    }
-
-    // getNeighbors() returns a collection of nodes connected to the given node, Takes in a given node,
-    // Include the weight of the connection in the returned collection
-    public HashSet<Node<T>> getNeighbors (Node<T> node) {
-        // iterate through and return a unque list of nodes
-        HashSet<Node<T>> neighbors = new HashSet<>();
-        // iterate over neighbors
-        for(Edge<T> potentialNeighbor : node.edges) {
-            if(!neighbors.contains(potentialNeighbor.nodeEdgeIsPointingTo.value)) {
-                neighbors.add(potentialNeighbor.nodeEdgeIsPointingTo);
-            }
-        }
-        return neighbors;
-    }
-
-    // addEdge() Adds a new edge between two nodes in the graph, Includes the ability to have a “weight”,
-    // Takes in the two nodes to be connected by the edge, Both nodes should already be in the Graph.
+    // Adds a new edge between two nodes in the graph
+    // Includes the ability to have a “weight”
+    // Takes in the two nodes to be connected by the edge
+    // Both nodes should already be in the Graph.
     public void addEdge(Node<T> node1, Node<T> node2, int weight) {
-        if(nodesInSet.contains(node1) && nodesInSet.contains(node2)) {
+        if(this.nodesInGraph.contains(node1) && this.nodesInGraph.contains(node2)) {
             node1.addEdgeToListOfEdges(node2, weight);
             node2.addEdgeToListOfEdges(node1, weight);
         }
     }
 
-    // getSize() Returns the total number of nodes in the graph
-    public int getSize() {
-        return nodesInSet.size();
+    // returns all of the nodes in the graph as a collection
+    public HashSet<Node<T>> getNodes() {
+        // TODO add in code to account for empty graph, such as: if (size() == 0) {return null;}
+        return nodesInGraph;
     }
 
 
-    // breadthFirstTraverse through graph
-    public HashSet<Node<T>> breadthFirstTraverse(Node<T> node) {
-        LinkedList<Node<T>> nodesToProcess = new LinkedList<>(); // will use as a queue
+    // Returns a collection of nodes connected to the given node
+    // Includes the weight of the connection in the returned collection
+    // Uses the Node class's set of neighboring edges with their nodes.
+    public HashSet<Node<T>> getNeighborNodes(Node<T> node) {
+        HashSet<Node<T>> setOfNeighborNodes = new HashSet<>();
+        // iterate over neighbors and put just the nodes in a set
+        for(Edge<T> neighborNode : node.getListOfNeighborsEachWithWeightAndNode()) {
+            if(!setOfNeighborNodes.contains(neighborNode.getTheNodeTheEdgeIsPointingTo())) {
+                setOfNeighborNodes.add(neighborNode.getTheNodeTheEdgeIsPointingTo());
+            }
+        }
+        return setOfNeighborNodes;
+    }
+
+
+    // Returns the total number of nodes in the graph
+    public int graphSize() {
+        return this.nodesInGraph.size();
+    }
+
+
+    // ======= Breadth FirstTraverse through Graph
+    // Explore neighbors before children in a BFS.
+    // Basic algorithm: Pop the first node from the queue. Check if the node has been visited already.
+    // Add the node's children to the end of the queue. Repeat while
+    // the queue still contains one or more nodes.
+
+//    public HashSet<Node<T>> breadthFirstTraverse(Node<T> startingNode) {
+    public List<T> breadthFirstTraverse(Node<T> startingNode) {
+        LinkedList<Node<T>> queueOfNodesToProcess = new LinkedList<>();
         HashSet<Node<T>> seen = new HashSet<>();
+        List<T> answerList = new LinkedList<>();
 
-        nodesToProcess.add(node);
+        // add starting node to the queue
+        queueOfNodesToProcess.add(startingNode);
 
-        while(!nodesToProcess.isEmpty()) {
-            Node current = nodesToProcess.removeFirst();
-            seen.add(current);
+        // iterate only while the queue is not empty
+        while(!queueOfNodesToProcess.isEmpty()) {
+            Node<T> currentNode = queueOfNodesToProcess.removeFirst();
 
-            HashSet neighbors = getNeighbors(current);
-            for( Object neighbor : neighbors) {  // <---------- why is it requiring an object, versus a Node?
+            // process if not seen (this is an essential if-statement when method serves to add node value to a list)
+            if(!seen.contains(currentNode)) {
+                seen.add(currentNode);
+                answerList.add(currentNode.getValue());
+            }
+
+            // get the current node's neighboring nodes
+            HashSet<Node<T>> setOfNeighborNodes = getNeighborNodes(currentNode);
+
+            // check the set of neighboring nodes and add any thus far unseen neighbors to the queue to process
+            for (Node<T> neighbor : setOfNeighborNodes) {
                 if (!seen.contains(neighbor)) {
-                    nodesToProcess.add((Node<T>) neighbor);
+                    queueOfNodesToProcess.add(neighbor);
                 }
             }
         }
-        return seen;
+        return answerList;
     }
 }

@@ -2,8 +2,10 @@ package code401Challenges;
 
 import java.util.Arrays;
 
+// The class matches the name of the file
 public class ArrayReverse {
-  //main method for running my code 
+
+  //main method for running my code  - main method is "the entry point" to this file.
   public static void main(String[] args) {
     int[] arrToReverse = new int[]{500, 30, 13, 1, -2};
     int[] reversedArray = reverseArray(arrToReverse);

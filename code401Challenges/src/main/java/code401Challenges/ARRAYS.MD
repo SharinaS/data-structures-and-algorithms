@@ -11,6 +11,12 @@ Write a function called reverseArray() that takes an array as an argument and re
 See the [code](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java) in my GitHub repo].
 
 ## Approach & Efficiency
+There are two different algorithms available for reversing the elements of an array:
+* Create a new array. Copy each element into the mirrored position in the new array. Return the new array.
+  * This will not modify the original array.
+* Swap the two elements in the mirrored spots from each other. Stop at the middle. Return the input array.
+  * This will not take up more memory.
+
 I decided to approach this problem with creating a new array, instead of the other option I had considered, which was to change the array in place. I chose the new array approach since it made the most sense to me initially, however creating a new array would sacrifice memory. 
 
 Big 0 time - O(n)
