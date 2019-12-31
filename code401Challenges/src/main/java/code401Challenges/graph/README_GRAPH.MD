@@ -19,6 +19,10 @@ Data structures used in the traversal:
 * Queue
 * HashSet
 
+Complexity
+* Time: (|V| + |E|) <-- where V is vertex (aka node) and E is edge
+* Space: )(|V|)
+
 ![image of whiteboard](/code401Challenges/assets/graph-breadth-first.jpg)
 
 ## Code Challenge: 
@@ -30,5 +34,11 @@ This code challenge uses the getNeighbors() method in the Graph class, and the f
 
 ## Code Challenge: Write a Depth First Traversal Through a Graph
 The [class DepthFirst](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/graph/DepthFirst.java) contains a function called depthFirst that accepts an adjacency list as a graph. It calls a helper function that recursively conducts a depth first traversal and returns a collection of nodes in their pre-order depth-first traversal order.
+
+There is also a recursive solution written.
+
+Complexity
+* Time: (|V| + |E|) <-- where V is vertex (aka node) and E is edge
+* Space: )(|V|)
 
 ![image of whiteboard](/code401Challenges/assets/depth-first-pre-order.jpg)
