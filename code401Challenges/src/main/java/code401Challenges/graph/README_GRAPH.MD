@@ -1,6 +1,8 @@
 # Graphs
 The class [Graph](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/graph) works with the [class Node](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/graph/Node.java) and the [class Edge](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/graph/Edge.java). 
 
+![image of paper](/code401Challenges/assets/graph-class-connections.jpg)
+
 ### The Graph class has the following methods:
 
 * addNode()
