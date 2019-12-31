@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-public class DepthFirst {
+public class DepthFirst<T> {
 
     // == Recursive Solution ==
     public static <T> List<T> preDepth(Graph<T> graph, Node<T> startingNode) {
@@ -37,5 +37,39 @@ public class DepthFirst {
             }
         }
         return values;
+    }
+
+
+    // === Iterative Solution ===
+    public static <T> LinkedList<T> depthFirstTraverseIterative(Node<T> startingNode) {
+        LinkedList<Node<T>> stackOfNodesToProcess = new LinkedList<>();
+        HashSet<Node<T>> seen = new HashSet<>();
+        LinkedList<T> answerList = new LinkedList<>();
+        Graph<T> graph = new Graph<>();
+
+        // add starting node to the stack
+        stackOfNodesToProcess.push(startingNode);
+
+        // iterate only while the stack is not empty
+        while(!stackOfNodesToProcess.isEmpty()) {
+            Node<T> currentNode = stackOfNodesToProcess.pop();
+
+            // process if not seen (this is an essential if-statement when method serves to add node value to a list)
+            if(!seen.contains(currentNode)) {
+                seen.add(currentNode);
+                answerList.add(currentNode.getValue());
+            }
+
+            // get the current node's neighboring nodes
+            HashSet<Node<T>> setOfNeighborNodes = graph.getNeighborNodes(currentNode);
+
+            // check the set of neighboring nodes and add any thus far unseen neighbors to the stack to process
+            for (Node<T> neighbor : setOfNeighborNodes) {
+                if (!seen.contains(neighbor)) {
+                    stackOfNodesToProcess.push(neighbor);
+                }
+            }
+        }
+        return answerList;
     }
 }
