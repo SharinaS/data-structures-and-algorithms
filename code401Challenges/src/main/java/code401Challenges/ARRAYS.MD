@@ -32,13 +32,14 @@ Whiteboarding done with Ahren Swett. Actual code written solo by Sharina Stubbs.
 Write a function called ArrayShift that takes an array and a number. Output is a new array that includes that number added to the middle of the original array. Avoids any built-in language specific methods.
 
 ## Approach & Efficiency
-I approached this problem by identifying the middle index of the original array, and I made a new array. I iterated through the original array up until the point of the middle index, at which point the input number was added to that middle index location. The iteration continued after the middle index with adding in the rest of the original array elements to the new array. 
+I approached this problem by identifying the middle index of the original array, and I made a new array. I iterated through the original array up until the point of the middle index, at which point the input number was added to that middle index location. The iteration continued after the middle index with adding in the rest of the original array elements to the new array. The new array that is created is +1 size compared to the old array.
+
+### Time and Space
 Big 0 time - O(n)
-Big 0 space - 0(n)
+Big 0 space - O(n)
 
 ## Solution
 ![screenshot of page](/code401Challenges/assets/array-shift.jpg)
-
 
 # Binary Search
 Whiteboarding done with Jon Veach. Code written by Sharina Stubbs. Find the code in [my GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java) and the tests I wrote [here](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/BinarySearchTest.java).

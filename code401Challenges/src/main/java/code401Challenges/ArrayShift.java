@@ -4,25 +4,21 @@ public class ArrayShift {
 
     public static int[] insertShiftArray(int[] input, int numberToAdd) {
         // find middle index of array
-        int middleIndex;
-        if (input.length % 2 == 0) {
-            middleIndex = input.length/2;
-        } else {
-            middleIndex = (input.length + 1) / 2;
-        }
-        // make a new array
-        int[] longerBy1Arr = new int[input.length + 1];
+        int middleIndex = (input.length + 1) / 2;
 
-        //iterate through old array and populate new array
-        for(int i = 0; i < longerBy1Arr.length; i++){
+        // make a new array
+        int[] answer = new int[input.length + 1];
+
+        // populate new array
+        for(int i = 0; i < answer.length; i++){
             if (i < middleIndex){
-                longerBy1Arr[i] = input[i];
+                answer[i] = input[i];
             } else if (i == middleIndex) {
-                longerBy1Arr[i] = numberToAdd;
+                answer[i] = numberToAdd;
             } else {
-                longerBy1Arr[i] = input[i-1];
+                answer[i] = input[i-1];
             }
         }
-        return longerBy1Arr;
+        return answer;
     }
 }
