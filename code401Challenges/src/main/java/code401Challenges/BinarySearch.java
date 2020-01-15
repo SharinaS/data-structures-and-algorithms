@@ -11,8 +11,10 @@ public class BinarySearch {
 
         // loop runs until the start reaches the end of the array
         while (start <= end ){
-            // establish the midpoint of the array
+
+            // set mid to be the value between start and end
             int mid = (start + end) / 2;
+
             // checks if key is equiv to the midpoint, or if it's greater or lesser than midpoint
             if (arr[mid] == key){
                 return mid;
@@ -21,6 +23,7 @@ public class BinarySearch {
             } else if(key > arr[mid]) {
                 start = mid + 1;
             }
+
         } return -1;
     }
 }

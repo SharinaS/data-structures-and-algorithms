@@ -5,6 +5,18 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BinarySearchTest {
+
+    // == checks what happens when there is no key in the array - expects -1
+    @Test
+    public void testNoKeyInArray() {
+        int[] arr = {11,22,33,44,55,66,77};
+        assertEquals(
+                "the index should be ",
+                -1,
+                BinarySearch.binarySearch(arr, 90)
+        );
+    }
+
     // == checks an even numbered array
     @Test
     public void testFindIndexEvenNumberedArray() {
@@ -16,15 +28,7 @@ public class BinarySearchTest {
         );
     }
 
-    @Test
-    public void testNoKeyInArray() {
-        int[] arr = {11,22,33,44,55,66,77};
-        assertEquals(
-                "the index should be ",
-                -1,
-                BinarySearch.binarySearch(arr, 90)
-        );
-    }
+    // == checks an odd-numbered length array
     @Test
     public void testFindIndexOddNumberedArray() {
         int[] arr = new int[]{4,8,15,16,23,42,56};
@@ -34,6 +38,8 @@ public class BinarySearchTest {
                 BinarySearch.binarySearch(arr, 56)
         );
     }
+
+    // == tests if it handles an array of length 1 appropriately
     @Test
     public void testCheckArraySingleItem() {
         int[] arr = new int[]{1};
@@ -43,5 +49,4 @@ public class BinarySearchTest {
                 BinarySearch.binarySearch(arr, 1)
         );
     }
-
 }

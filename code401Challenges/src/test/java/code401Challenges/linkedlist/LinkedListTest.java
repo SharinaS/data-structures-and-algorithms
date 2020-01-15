@@ -35,6 +35,21 @@ public class LinkedListTest {
         );
     }
 
+    @Test
+    public void testInsertAtEnd2 () {
+        LinkedList testList = new LinkedList();
+
+        testList.insertAtEnd(99);
+        testList.insertAtEnd(4);
+        testList.insertAtEnd(45);
+
+        assertEquals(
+                "Should expect 4 at the end of the list",
+                45,
+                testList.head.next.next.value
+        );
+    }
+
 
     // Test if the head property will properly point to the first node in the linked list
     @Test

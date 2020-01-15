@@ -25,7 +25,7 @@ public class LinkedList {
             head = node;
         }
 
-        // Note: shorter and sexier alternative to adding a node:
+        // Note: shorter and sexier alternative to adding a node (need a constructor for this, specifically:
         //public void insertHeadReview(Review data) {this.head = new Node(data, this.head);}
     }
 
@@ -33,7 +33,7 @@ public class LinkedList {
     public void insertAtEnd(int value) {
         Node newNode = new Node();
         newNode.value = value;
-        Node curr = head;
+        Node curr;
 
         if(head == null){
             head = newNode;
@@ -67,7 +67,7 @@ public class LinkedList {
         }
     }
 
-    // === Insert a value after a given node value ===  <---------------
+    // === Insert a value after a given node value ===
     public void insertAfter (int value, int value2) {
         Node curr = head;
         Node newNode = new Node();
@@ -76,7 +76,7 @@ public class LinkedList {
         while(curr != null && curr.value != value) {
             curr = curr.next;
         }
-        if( curr != null) {
+        if(curr != null) {
             newNode.next = curr.next;
             curr.next = newNode;
         }
@@ -84,14 +84,21 @@ public class LinkedList {
     }
 
     // === Turn the linked list into a string and return it ===
+    // can alternatively use a StringBuilder, with the word, append, to build up the string.
+    // stringBuilder.append("{").append(current.value).append("} -> ");
+
     @Override
     public String toString(){
         Node curr = head;
+
         StringJoiner stringy = new StringJoiner(", ");
+
         while (curr != null){
-            System.out.println(curr.value);
+            //System.out.println(curr.value);
             Integer currentValue = curr.value;
+
             stringy.add(currentValue.toString());
+
             curr = curr.next;
         }
         //System.out.println(curr.value);
