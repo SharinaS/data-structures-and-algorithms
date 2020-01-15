@@ -2,6 +2,7 @@ package code401Challenges;
 
 public class ArrayShift {
 
+
     public static int[] insertShiftArray(int[] input, int numberToAdd) {
         // find middle index of array
         int middleIndex = (input.length + 1) / 2;

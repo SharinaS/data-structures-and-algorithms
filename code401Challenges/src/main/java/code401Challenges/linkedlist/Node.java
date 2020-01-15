@@ -27,4 +27,13 @@ public class Node {
         this.next = null;
     }
      */
+
+    // Alternative way to write toString method, instead of writing it in the LinkList class.
+    // Given the following, you can now, in the LinkedList class, just call the toString method... like so:
+//    public String toString(){
+//        return (this.head == null ? "NULL" : this.head.toString());
+//    }
+    public String toString() {
+        return "{" + this.value + "} -> " + (this.next == null ? "NULL" : this.next.toString());
+    }
 }
