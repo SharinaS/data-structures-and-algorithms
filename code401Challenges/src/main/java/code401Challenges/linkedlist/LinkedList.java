@@ -146,17 +146,18 @@ public class LinkedList {
     Create a leader and a follower. If I need to find the second from the end,
     and the array is two from the end, put those two variables k vodes apart. Then, move each variables step by step down
     the linked list. When the leader hits the end, the follower will be the node you're looking for.  Time complexity is O(n)
-    and space complexity is O(1).
-    Node front = list.head;
-    Node back = list.head;
-    int counter = 0
-    While (front !=null):
-    front = front.next
-    counter ++
-    if(counter > k) back = back.next.
-    */
+    and space complexity is O(1).*/
 
-    // Finds alternating nodes of two linked lists and joins them into one list
+//    Node front = list.head;
+//    Node back = list.head;
+//    int counter = 0
+//    While (front !=null):
+//    front = front.next
+//    counter ++
+//    if(counter > k) back = back.next.
+
+
+    // Finds alternating nodes of two linked lists and merges them into one list IN PLACE
     public static LinkedList mergeAlternatingNodes(LinkedList a, LinkedList b) {
         Node bCurr = b.head;
         Node aCurr = a.head;
@@ -168,18 +169,16 @@ public class LinkedList {
             bNext = bCurr.next;
             aNext = aCurr.next;
 
-            aCurr.next = bNext;
             bCurr.next = aCurr;
+            aCurr.next = bNext;
 
             bCurr = bNext;
             aCurr = aNext;
         }
-
-        b.head = bCurr;
         return b;
     }
 
-    // Merge two linked lists
+    // Merge two linked lists -- Method 2 of 2
     // Received help with logic from Michelle Ferreirae
     public static LinkedList mergeLinkedLists(LinkedList a, LinkedList b) {
         if (a.head == null) {

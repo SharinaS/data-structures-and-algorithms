@@ -231,28 +231,28 @@ public class LinkedListTest {
         testList.runningBackwards(9);
     }
 
+    // ========== Merge Linked Lists, so the nodes alternate -- 2 Methods =========
     @Test
     public void testAlternatingLinkedList1() {
 
         LinkedList testListOne = new LinkedList();
         LinkedList testListTwo = new LinkedList();
         // list one
-        testListOne.insertAtHead(2);
         testListOne.insertAtHead(3);
+        testListOne.insertAtHead(2);
         testListOne.insertAtHead(1);
         // list two
-        testListTwo.insertAtHead(4);
-        testListTwo.insertAtHead(9);
-        testListTwo.insertAtHead(5);
+        testListTwo.insertAtHead(300);
+        testListTwo.insertAtHead(200);
+        testListTwo.insertAtHead(100);
         LinkedList.mergeAlternatingNodes(testListOne, testListTwo);
 
-        assertEquals("should get 1 5 3 9 2 4",
-                "1, 5, 3, 9, 2, 4",
-                testListOne.toString()
+        assertEquals("should get 100 1 200 2 300 3",
+                "100, 1, 200, 2, 300, 3",
+                testListTwo.toString()
         );
     }
 
-    //=== Testing of public static LinkedList mergeLists(LinkedList a, LinkedList b) ===
 
     // test equal length lists
     @Test
