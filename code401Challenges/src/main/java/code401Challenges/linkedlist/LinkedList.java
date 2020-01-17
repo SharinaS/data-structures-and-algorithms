@@ -204,6 +204,21 @@ public class LinkedList {
         return a;
     }
 
+    // Merging two lists with Recursion - from Michelle Ferreirae
+    public static Node merge(Node head1, Node head2) {
+        if(head1 == null) {
+            return head2;
+        } else if (head2 ==null) {
+            return head1;
+        }
+        else {
+            Node restOfTheMergedList = merge(head1.next, head2.next);
+            head2.next = restOfTheMergedList;
+            head1.next = head2;
+            return head1;
+        }
+    }
+
     // Reverse a linked list
     // https://www.geeksforgeeks.org/reverse-a-linked-list/
 
