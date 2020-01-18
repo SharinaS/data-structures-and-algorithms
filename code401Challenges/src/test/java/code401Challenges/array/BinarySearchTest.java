@@ -1,4 +1,4 @@
-package code401Challenges;
+package code401Challenges.array;
 
 import org.junit.Test;
 
@@ -49,4 +49,5 @@ public class BinarySearchTest {
                 BinarySearch.binarySearch(arr, 1)
         );
     }
+
 }

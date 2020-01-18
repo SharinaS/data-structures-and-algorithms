@@ -1,4 +1,4 @@
-package code401Challenges;
+package code401Challenges.array;
 
 import java.util.Arrays;
 

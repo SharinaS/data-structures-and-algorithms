@@ -1,7 +1,5 @@
 package code401Challenges.tree;
 
-import code401Challenges.BinarySearch;
-
 // some logic referenced from: https://www.youtube.com/watch?v=wmS-ClgZ1w8&t=584s
 // Main resource: https://www.baeldung.com/java-binary-tree
 

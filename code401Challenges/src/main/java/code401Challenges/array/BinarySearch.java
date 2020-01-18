@@ -1,4 +1,4 @@
-package code401Challenges;
+package code401Challenges.array;
 
 // Use binary search to find the index of a given integer within an array, called key.
 // Resource: https://www.geeksforgeeks.org/binary-search-bisect-in-python/
