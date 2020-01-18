@@ -243,7 +243,23 @@ public class StringStuff {
         System.out.println(evenCounter);
 
 
+        System.out.println("************ LENGTH OF AN INT ************");
 
+        int number = 555;
+        int numLength = String.valueOf(number).length(); // <----  this statement involves memory allocation
+        System.out.println(numLength);
+
+        System.out.println("************ ==> FINDING THE LENGTH OF AN INT <== ************");
+        // Jump by 10, increase the count by 1, until you jump past the number. The count will be how many digits
+        // the number is long.
+        int theCount = 0;
+        long jumpsBy10 = 1;
+        int integerInQuestion= 540;
+        while (jumpsBy10 <= integerInQuestion) {
+            theCount++;
+            jumpsBy10 *= 10;
+        }
+        System.out.println(theCount);
     }
 }
 

@@ -102,3 +102,10 @@ No code is yet available for this problem, beyond that  shown in the image of th
 ![whiteboarding](/code401Challenges/assets/count-except-67a.jpg)
 
 ![whiteboarding](/code401Challenges/assets/count-except-67b.jpg)
+
+# Array Methods
+This is a collection of methods that solve common code challenges involving arrays. Code challenges sourced from sites such as Leetcode and CodingBat.
+
+Only the code is available, minus an image taken of a whiteboard, unless an image is imbedded with the method listed below.
+## Methods 
+* findDigitsWithEvenNumberLengthsInArray()

@@ -231,7 +231,8 @@ public class LinkedListTest {
         testList.runningBackwards(9);
     }
 
-    // ========== Merge Linked Lists, so the nodes alternate -- 2 Methods =========
+    // ========== A Few Methods to Merge Linked Lists, Alternating Nodes  =========
+    // Tests the Method: mergeAlternatingNodes()
     @Test
     public void testAlternatingLinkedList1() {
 
@@ -242,19 +243,29 @@ public class LinkedListTest {
         testListOne.insertAtHead(2);
         testListOne.insertAtHead(1);
         // list two
+        testListTwo.insertAtHead(0);
         testListTwo.insertAtHead(300);
         testListTwo.insertAtHead(200);
         testListTwo.insertAtHead(100);
+
         LinkedList.mergeAlternatingNodes(testListOne, testListTwo);
 
-        assertEquals("should get 100 1 200 2 300 3",
-                "100, 1, 200, 2, 300, 3",
-                testListTwo.toString()
-        );
+        assertEquals("should get 100 1 200 2 300 3 0",
+                "100, 1, 200, 2, 300, 3, 0",
+                testListTwo.toString());
+        assertEquals("Third element of list should be 200",
+                200,
+                testListTwo.head.next.next.value);
+        assertEquals("First element of list should be 100",
+                100,
+                testListTwo.head.value);
+        assertEquals("Fourth element of list should be 2",
+                2,
+                testListTwo.head.next.next.next.value);
     }
 
 
-    // test equal length lists
+    // Tests the method: mergeLinkedLists()
     @Test
     public void testMergeLinkedLists1() {
         LinkedList testListOne = new LinkedList();
@@ -267,6 +278,7 @@ public class LinkedListTest {
         testListTwo.insertAtHead(4);
         testListTwo.insertAtHead(9);
         testListTwo.insertAtHead(5);
+
         LinkedList.mergeLinkedLists(testListOne, testListTwo);
 
         assertEquals("should get 1 5 3 9 2 4",
@@ -289,6 +301,7 @@ public class LinkedListTest {
         testListTwo.insertAtHead(4);
         testListTwo.insertAtHead(9);
         testListTwo.insertAtHead(5);
+
         LinkedList.mergeLinkedLists(testListOne, testListTwo);
 
         assertEquals("should get 6 5 1 9 3 4 2",
@@ -296,7 +309,6 @@ public class LinkedListTest {
                 testListOne.toString()
         );
     }
-
 
     // test unequal length lists with list two being longer
     @Test
@@ -310,6 +322,7 @@ public class LinkedListTest {
         testListTwo.insertAtHead(4);
         testListTwo.insertAtHead(9);
         testListTwo.insertAtHead(5);
+
         LinkedList.mergeLinkedLists(testListOne, testListTwo);
 
         assertEquals("should get 3 5 2 9 4",
@@ -318,7 +331,7 @@ public class LinkedListTest {
         );
     }
 
-    // test empty list and a full list
+    // Tests the method: mergeLinkedLists()
     @Test
     public void testMergeLinkedLists4() {
         LinkedList testListOne = new LinkedList();
