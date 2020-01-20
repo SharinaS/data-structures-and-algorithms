@@ -16,9 +16,9 @@ Code is written in Java.
 
 [Linked Lists](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/linkedlist/README_LINKEDLIST.MD)
 
-[Sorting Algorithms](/Users/sharina/codefellows/401Java/data-structures-and-algorithms/code401Challenges/src/main/java/code401Challenges/sort/README_SORTING.MD)
+[Sorting Algorithms](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/sort/README_SORTING.MD)
 
-[Stacks and Queues](/Users/sharina/codefellows/401Java/data-structures-and-algorithms/code401Challenges/src/main/java/code401Challenges/stacksandqueues/README_STACKSQUEUES.MD)
+[Stacks and Queues](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/stacksandqueues/README_STACKSQUEUES.MD)
 
 [Strings](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/string/README_STRINGS.MD)
 

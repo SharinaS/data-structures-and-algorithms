@@ -19,7 +19,7 @@ public class Stack<T> {
         Node<T> newNode = new Node<T>(data);
         // point the new node to the top of the list
         newNode.next = this.top;
-        // change the top pointer to the new node
+        // change the top to be the new node
         this.top = newNode;
     }
 
