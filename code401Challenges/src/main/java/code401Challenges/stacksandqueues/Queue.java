@@ -49,7 +49,7 @@ public class Queue<T> {
     // without removing it from the stack.
     public T peek() throws NoSuchElementException {
         if (this.front == null) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("Sorry, the queue is empty");
         } else {
             return this.front.data;
         }
@@ -58,7 +58,4 @@ public class Queue<T> {
     public boolean isEmpty() {
         return this.front == null;
     }
-
-
-
-} //end of the Class
+}
