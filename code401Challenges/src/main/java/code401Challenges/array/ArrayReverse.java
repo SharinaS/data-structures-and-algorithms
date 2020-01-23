@@ -5,14 +5,13 @@ import java.util.Arrays;
 // The class matches the name of the file
 public class ArrayReverse {
 
-  //main method for running my code  - main method is "the entry point" to this file.
   public static void main(String[] args) {
     int[] arrToReverse = new int[]{500, 30, 13, 1, -2};
     int[] reversedArray = reverseArray(arrToReverse);
     System.out.println(Arrays.toString(reversedArray));
   }
 
-  //arrayReverse Method
+  // Reverse an array - Uses new array
   public static int[] reverseArray(int[] incomingArr) {
     int arrayLength = incomingArr.length;
     int[] newCoolArr= new int[arrayLength];
@@ -21,6 +20,17 @@ public class ArrayReverse {
       newCoolArr[arrayLength - i - 1] = incomingArr[i];
     }
     return newCoolArr;
+  }
+
+  //====== Following methods have tests written in their test class.
+
+  // Reverse an array - uses new array, option 2
+  public static int[] reverseAnArrayAndMakeNewArray(int[] nums) {
+    int[] newArr = new int[nums.length];
+    for(int i = 0; i < nums.length; i++) {
+      newArr[i] = nums[nums.length-1-i];
+    }
+    return newArr;
   }
 }
 
