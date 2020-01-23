@@ -6,6 +6,8 @@ import java.util.Stack;
 // https://leetcode.com/problems/valid-parentheses/discuss/9248/My-easy-to-understand-Java-Solution-with-one-stack
 //Stack<Character> charStack = new Stack<Character>();
 
+// consider: char ch = input.charAt(i);
+
 public class MultiBracketValidation {
 
     public static boolean multiBracketValidation (String input) {
@@ -40,19 +42,4 @@ public class MultiBracketValidation {
     }
 }
 
-// Attempted to write the code from the whiteboarding,
-// but abandoned this strategy when I started thinking about queues as more likeable solution.
-
-//        ArrayList<Character> bracketArr = new ArrayList<>();
-//        for(int i = 0; i < input.length(); i++) {
-//            if (i == '(' || i == ')' || i == '[' || i == ']' || i == '{' || i == '}') {
-//                bracketArr.add( input.charAt(i) );
-//            }
-//        }
-//        int searcher = 0;
-//        int stepper= 0;
-//        boolean flag = true;
-//        while(stepper < bracketArr.size() && flag) {
-//            int searcherCount = 0;
-//
-//        }
+// See Jan 23 Java 401d9 class demo notes in repo for discussion of alternative solution
