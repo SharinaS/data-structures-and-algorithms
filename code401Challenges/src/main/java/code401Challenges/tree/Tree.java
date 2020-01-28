@@ -1,14 +1,12 @@
 package code401Challenges.tree;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class Tree<T> {
-
+    // instance variable
     public Node<T> root;
 
+    // constructors
     public Tree() {
         root = null;
     }
@@ -29,7 +27,6 @@ public class Tree<T> {
         if(root == null) {
             return valuesArr;
         }
-
         valuesArr.add((T) root.value);
 
         if(root.left != null){
@@ -63,21 +60,6 @@ public class Tree<T> {
         return valuesArr;
     }
 
-//    public Integer[] inOrderTraversal() {
-//        return this.inOrderTraversalHelper(this.root).toArray(new Integer[0]);
-//    }
-//
-//    private List<Integer> inOrderTraversalHelper(Node root) {
-//        List<Integer> answer = new LinkedList<>();
-//
-//        if (root != null) {
-//            answer.addAll(inOrderTraversalHelper(root.left));
-//            answer.add((Integer) root.value);
-//            answer.addAll(inOrderTraversalHelper(root.right));
-//        }
-//        return answer;
-//    }
-
 
     // ======= PostOrder Traversal
     public ArrayList<T> postOrderTraversal() {
@@ -101,17 +83,17 @@ public class Tree<T> {
         return valuesArr;
     }
 
+    // TODO: write shorter postOrder method
+
+
     // ======= Breadth First Traversal, using a queue, for numbers =======
-    // Michelle solution: https://github.com/codefellows/seattle-java-401d6/blob/master/class-18/Tree.java
+    // Notes from Michelle at: https://github.com/codefellows/seattle-java-401d6/blob/master/class-18/Tree.java
 
-
-    public List<T> breadthFirstSearch() {
-
+    public List<T> breadthFirstTraversalWrapper() {
         return breadthFirstTraverse(this.root);
     }
-
     public List<T> breadthFirstTraverse (Node<T> root) {
-        java.util.Queue<Node<T>> storageQ = new LinkedList<>();
+        Queue<Node<T>> storageQ = new LinkedList<>();
         List<T> result = new LinkedList<>();
 
         // put the root into the queue to process first.
@@ -120,39 +102,39 @@ public class Tree<T> {
         } else {
             storageQ.add(root);
         }
-
         // process rest of the nodes, while there are nodes left
         while (!storageQ.isEmpty()) {
             Node<T> currNode = storageQ.remove();
+            result.add(currNode.value);
 
-            result.add((T) currNode.value);
+            System.out.println("current result is " + result);
+            System.out.println("current queue has " + storageQ);
+            System.out.println("current node is " + currNode.value);
 
-            if (currNode.left != null) {
+            if (currNode !=null && currNode.left != null) {
                 storageQ.add(currNode.left);
             }
-            if (root.right != null)
+            if (currNode != null && currNode.right != null) {
                 storageQ.add(currNode.right);
             }
+        }
         return result;
     }
-/////////////////
 
-    //    // ======= Find Max Value in a Binary Tree =======
-    public int findMaxValue() {
+
+    // ======= Find Max Value in a Binary Tree =======
+    public int findMaxValueWrapper() {
         if (this.root.value instanceof Integer){
             return preOrderMaxFinder((Node<Integer>) this.root, Integer.MIN_VALUE);
         } else {
             throw new IllegalStateException();
         }
-
     }
 
     private int preOrderMaxFinder(Node <Integer> curr, int highest) {
-
         if(curr == null) {
             return highest;
         }
-
         if(curr.value > highest) {
             highest = curr.value;
         }
@@ -182,7 +164,6 @@ public class Tree<T> {
     }
 
     // ====== Find Sum of nodes in a Tree from Michelle Ferreirae ========
-
     public int sum(Node<Integer> root) {
         // base case
         if (root == null) {
