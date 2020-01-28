@@ -3,32 +3,32 @@ package code401Challenges.tree;
 // some logic referenced from: https://www.youtube.com/watch?v=wmS-ClgZ1w8&t=584s
 // Main resource: https://www.baeldung.com/java-binary-tree
 
+// note that BinarySearchTree could extend Tree, since it's a type of a tree.
+//public class BinarySearchTree extends Tree<Integer> {}
 
 public class BinarySearchTree {
-
     private Node <Integer> root;
 
-
+    // constructor
     public BinarySearchTree() {
-        root = null;
+        this.root = null;
     }
 
-
-    // adds a node to the binary search tree
+    // ===== adds a node to the binary search tree
+    // wrapper method
     public void add(Integer value) {
-        root = addingHelp(root, value);
+        root = addNode(root, value);
     }
 
-    // recursive method to do the insertion
-    private Node <Integer> addingHelp(Node <Integer> curr, Integer value) {
-
+    // recursive method to do the insertion - provides extra info at each recursive level.
+    private Node <Integer> addNode(Node <Integer> curr, Integer value) {
         if (curr == null) {
             return new Node<>(value);
         }
         if (value < curr.value) {
-            curr.left = addingHelp(curr.left, value);
+            curr.left = addNode(curr.left, value);
         } else if (value > curr.value) {
-            curr.right = addingHelp(curr.right, value);
+            curr.right = addNode(curr.right, value);
         } else {
             return curr;
         }
@@ -36,7 +36,7 @@ public class BinarySearchTree {
     }
 
 
-    // checks if the value is in the tree at least once
+    // ===== checks if the value is in the tree at least once
     public boolean contains(int value) {
         Node <Integer> currNode = root;
         while (!currNode.value.equals(value)) {
@@ -53,6 +53,8 @@ public class BinarySearchTree {
         return true;
     }
 
+
+    // ===== toString method
     @Override
     public String toString() {
         return "BinarySearchTree{" +
@@ -60,6 +62,7 @@ public class BinarySearchTree {
                 '}';
     }
 
+    // ===== getter
     public Node<Integer> getRoot() {
         return root;
     }

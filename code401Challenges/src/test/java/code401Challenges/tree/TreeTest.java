@@ -45,10 +45,6 @@ public class TreeTest {
         );
     }
 
-//    @Test
-//    public void testInOrderTraversal() {
-//        assertArrayEquals(new Integer[]{4, 2, 6, 5, 1, 3}, tree.inOrderTraversal());
-//    }
 
     @Test
     public void inPreOrderTraversal() {
@@ -122,9 +118,46 @@ public class TreeTest {
         goodAnswer.add(11);
         goodAnswer.add(4);
 
-        assertEquals("Expecting a bunch of numbers",
+        assertEquals("Expecting [2, 7, 5, 2, 6, 7, 5, 11, 4]",
                goodAnswer,
-                breadthTestTree.breadthFirstSearch());
+                breadthTestTree.breadthFirstTraversalWrapper());
+
+    }
+
+    @Test
+    public void testBreadfirstTraverse2() {
+
+        //       2
+        //      / |
+        //     7  5
+        //    / |  \
+        //   2  6   7
+        //     / \
+        //    5  11
+        Node root = new Node(2);
+        root.left = new Node(7);
+        root.right = new Node(5);
+        root.left.left = new Node(2);
+        root.left.right = new Node(6);
+        root.left.right.left = new Node(5);
+        root.left.right.right = new Node(11);
+        root.right.right = new Node(7);
+
+
+        Tree breadthTestTree = new Tree(root);
+        ArrayList<Integer> goodAnswer = new ArrayList<>();
+        goodAnswer.add(2);
+        goodAnswer.add(7);
+        goodAnswer.add(5);
+        goodAnswer.add(2);
+        goodAnswer.add(6);
+        goodAnswer.add(7);
+        goodAnswer.add(5);
+        goodAnswer.add(11);
+
+        assertEquals("Expecting [2, 7, 5, 2, 6, 7, 5, 11]",
+                goodAnswer,
+                breadthTestTree.breadthFirstTraversalWrapper());
 
     }
 
@@ -145,7 +178,7 @@ public class TreeTest {
 
         assertEquals("Expecting 11",
                 11,
-                testTree.findMaxValue()
+                testTree.findMaxValueWrapper()
                 );
     }
 }

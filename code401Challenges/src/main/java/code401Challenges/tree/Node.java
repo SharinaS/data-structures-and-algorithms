@@ -16,6 +16,8 @@ public class Node <T> {
         this.right = null;
     }
 
+    // allows for constructing the trees easier in tests,
+    // since this allows for adding in the right and the left node.
     public Node(T value, Node<T> left, Node<T> right) {
         this.value = value;
         this.left = left;
