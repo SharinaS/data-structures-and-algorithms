@@ -20,9 +20,10 @@ public class FizzBuzzTreeTest {
         root.left.right = new Node ("7");
         root.right = new Node("3");
 
-
         FizzBuzzTree testTree = new FizzBuzzTree(root);
-        testTree.fizzbuzzRecursion();
+
+        testTree.fizzbuzzRecursionWrapper();
+
         assertEquals(
                 "Fizz",
                 testTree.root.right.value
@@ -39,7 +40,7 @@ public class FizzBuzzTreeTest {
         root.right = new Node("3");
 
         FizzBuzzTree testTree = new FizzBuzzTree(root);
-        testTree.fizzbuzzRecursion();
+        testTree.fizzbuzzRecursionWrapper();
         assertEquals(
                 "7",
                 testTree.root.left.right.value
@@ -57,7 +58,7 @@ public class FizzBuzzTreeTest {
         root.right.right = new Node("15");
 
         FizzBuzzTree testTree = new FizzBuzzTree(root);
-        testTree.fizzbuzzRecursion();
+        testTree.fizzbuzzRecursionWrapper();
         assertEquals(
                 "BizzFuzz",
                 testTree.root.right.right.value

@@ -48,16 +48,13 @@ public class BinarySearchTreeTest {
     @Test
     public void testAdd3() {
         BinarySearchTree testbst = new BinarySearchTree();
-
         testbst.add(6);
         testbst.add(4);
         testbst.add(5);
         testbst.add(3);
 
-
         Integer expected = 3;
-
-        assertEquals("Binary search tree root should be 3",
+        assertEquals("root.left.left should be 3.",
                 expected,
                 testbst.getRoot().left.left.value
         );
@@ -67,12 +64,10 @@ public class BinarySearchTreeTest {
     // test if contains method works
     public void testContains1() {
         BinarySearchTree testbst = new BinarySearchTree();
-
         testbst.add(6);
         testbst.add(4);
         testbst.add(5);
         testbst.add(3);
-
         assertTrue(testbst.contains(5));
     }
 
@@ -80,12 +75,10 @@ public class BinarySearchTreeTest {
     // test if method catches that a value should not be in the tree
     public void testContains2() {
         BinarySearchTree testbst = new BinarySearchTree();
-
         testbst.add(6);
         testbst.add(4);
         testbst.add(5);
         testbst.add(3);
-
         assertFalse(testbst.contains(10));
     }
 }
