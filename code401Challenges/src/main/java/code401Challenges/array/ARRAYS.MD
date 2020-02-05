@@ -108,4 +108,20 @@ This is a collection of methods that solve common code challenges involving arra
 
 Only the code is available, minus an image taken of a whiteboard, unless an image is imbedded with the method listed below.
 ## Methods 
-* findDigitsWithEvenNumberLengthsInArray()
+### findDigitsWithEvenNumberLengthsInArray()
+Problem Domain: A method that, given an array nums of integers,returns how many of those integers contain an even number of digits.
+* Input: array
+* Output: int
+* Big O 
+  * Time: O(n^2) <---
+  * Space: O(n) <----
+* Code is found in my GitHub [here]() and Tests are found [here]()
+
+### checkForAPairOf2AndPairOf4()
+* Problem Domain: Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
+* Input: array
+* Output: boolean
+* Big O 
+  * Time: O(n)
+  * Space: O(n)
+* Code is found in my GitHub [here]() and Tests are found [here]()

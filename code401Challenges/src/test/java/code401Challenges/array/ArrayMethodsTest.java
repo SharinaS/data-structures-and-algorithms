@@ -37,4 +37,32 @@ public class ArrayMethodsTest {
                 7,
                 ArrayMethods.findDigitsWithEvenNumberLengthsInArray(nums));
     }
+
+    @Test
+    public void checkForAPairOf2AndPairOf4_1() {
+        int[] nums = {1,2,2};
+        assertTrue("output should be true",
+                ArrayMethods.checkForAPairOf2AndPairOf4(nums));
+    }
+
+    @Test
+    public void checkForAPairOf2AndPairOf4_2() {
+        int[] nums = {1,5,91,4,4,100};
+        assertTrue("output should be true",
+                ArrayMethods.checkForAPairOf2AndPairOf4(nums));
+    }
+
+    @Test
+    public void checkForAPairOf2AndPairOf4_3() {
+        int[] nums = {3,4,4,8,10,2,2};
+        assertFalse("output should be false b/c there are both pairs of 2 and 4 in array",
+                ArrayMethods.checkForAPairOf2AndPairOf4(nums));
+    }
+
+    @Test
+    public void checkForAPairOf2AndPairOf4_4() {
+        int[] nums = {3,4,5,2,8,4,9};
+        assertFalse("output should be false because there are no pairs of 2s or 4s next to each other",
+                ArrayMethods.checkForAPairOf2AndPairOf4(nums));
+    }
 }
