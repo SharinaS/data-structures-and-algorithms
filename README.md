@@ -7,7 +7,7 @@ Sharina Stubbs
 
 # Code Challenges with Solutions in Java
 
-[Arrays](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ARRAYS.MD)
+[Arrays](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/array/ARRAYS.MD)
 
 [Graphs](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/graph/README_GRAPH.MD)
 
