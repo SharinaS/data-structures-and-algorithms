@@ -8,7 +8,7 @@ Sharina Stubbs
 ## Problem Domain 
 Write a function called reverseArray() that takes an array as an argument and returns an array with elements in reversed order. Avoids any built-in language specific methods. 
 
-See the [code](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayReverse.java) in my GitHub repo].
+See the [code](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/array/ArrayReverse.java) in my GitHub repo and the tests [here](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/array/ArrayReverseTest.java).
 
 ## Approach & Efficiency
 There are two different algorithms available for reversing the elements of an array:
@@ -115,7 +115,7 @@ Problem Domain: A method that, given an array nums of integers,returns how many 
 * Big O 
   * Time: O(n^2) <---
   * Space: O(n) <----
-* Code is found in my GitHub [here]() and Tests are found [here]()
+* Code is found in my GitHub [here](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/array/ArrayMethods.java) and Tests are found [here](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/array/ArrayMethodsTest.java).
 
 ### checkForAPairOf2AndPairOf4()
 * Problem Domain: Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
@@ -124,4 +124,4 @@ Problem Domain: A method that, given an array nums of integers,returns how many 
 * Big O 
   * Time: O(n)
   * Space: O(n)
-* Code is found in my GitHub [here]() and Tests are found [here]()
+* Code is found in my GitHub [here](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/array/ArrayMethods.java) and Tests are found [here](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/array/ArrayMethodsTest.java).
