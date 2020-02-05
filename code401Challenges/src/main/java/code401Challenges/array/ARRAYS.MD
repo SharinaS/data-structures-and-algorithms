@@ -26,7 +26,7 @@ Big 0 space - 0(n)
 ![screenshot of page](/code401Challenges/assets/array-reverse.jpg)
 
 # Array Shift
-Whiteboarding done with Ahren Swett. Actual code written solo by Sharina Stubbs. My code can be found in my [GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/ArrayShift.java), along with associated [tests](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/ArrayShiftTest.java).
+Whiteboarding done with Ahren Swett. Actual code written solo by Sharina Stubbs. My code can be found in my [GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/array/ArrayShift.java), along with associated [tests](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/array/ArrayShiftTest.java).
 
 ## Challenge
 Write a function called ArrayShift that takes an array and a number. Output is a new array that includes that number added to the middle of the original array. Avoids any built-in language specific methods.
@@ -42,7 +42,7 @@ Big 0 space - O(n)
 ![screenshot of page](/code401Challenges/assets/array-shift.jpg)
 
 # Binary Search
-Whiteboarding done with Jon Veach. Code written by Sharina Stubbs. Find the code in [my GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/BinarySearch.java) and the tests I wrote [here](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/BinarySearchTest.java).
+Whiteboarding done with Jon Veach. Code written by Sharina Stubbs. Find the code in [my GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/array/BinarySearch.java) and the tests I wrote [here](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/array/BinarySearchTest.java).
 
 ## Challenge
 Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
@@ -68,7 +68,7 @@ Examples:
 * {(})	FALSE
 * [({}]	FALSE
 
-Check out my code in [my GitHub repo](https://github.com/SharinaS/data-structures-and-algorithms/tree/master/code401Challenges/src/main/java/code401Challenges/utilities).
+Check out [the code](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/main/java/code401Challenges/utilities/MultiBracketValidation.java) and [the tests](https://github.com/SharinaS/data-structures-and-algorithms/blob/master/code401Challenges/src/test/java/code401Challenges/utilities/MultiBracketValidationTest.java) in my GitHub repo.
 
 ## Algorithm
 The algorithm I implemented in my code uses a stack to store all open brackets. For each iteration through the string, the potential mate of the bracket stored in the stack is compared to the top of the stack. If there's a match, the bracket in the stack is popped. What should be left is an empty stack. If not, there's an unclaimed bracket in the stack, and so the algorithm returns false.
